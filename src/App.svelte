@@ -494,8 +494,8 @@
         <p>
           This chart shows the
           <strong>area in square kilometres</strong>
-          of each local authority district in the UK. Each circle represents one
-          district. The scale is logarithmic.
+          of each local authority district in the Nigeria. Each circle
+          represents one district. The scale is logarithmic.
         </p>
       </div>
     </section>
