@@ -28,7 +28,7 @@
   }
   .v-padded {
     box-sizing: border-box;
-    padding: 40px 0;
+    padding: 30px 0;
   }
 </style>
 

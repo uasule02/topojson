@@ -316,17 +316,16 @@
 </style>
 
 <ONSHeader filled={true} center={false} />
-
 <Header
-  bgcolor="#206095"
+  bgcolor="#000fff"
   bgfixed={true}
   theme="dark"
   center={false}
   short={true}>
-  <h1>This is the title of the article</h1>
+
+  <h1 style="margin-top: 5px">E-NAIRA Statistics</h1>
   <p class="text-big" style="margin-top: 5px">
-    This is a short text description of the article that might take up a couple
-    of lines
+    This is a short text description of e-naira usage across Nigeria.
   </p>
   <p style="margin-top: 20px">DD MMM YYYY</p>
   <p>
@@ -335,20 +334,33 @@
       mono={true}
       bind:checked={animation} />
   </p>
-  <div style="margin-top: 90px;">
+  <div style="margin-top: 40px;">
     <Arrow color="white" {animation}>Scroll to begin</Arrow>
-  </div>
-</Header>
+  </div> 
+</Header> 
 
-<Filler theme="lightblue" short={true} wide={true} center={false}>
+
+<!-- <Filler theme="lightblue" short={true} wide={true} center={false}>
+  
   <p class="text-big">This is a large, left-aligned text caption</p>
-</Filler>
+
+</Filler> -->
 
 <Section>
-  <h2>This is a section title</h2>
+  <h2>E-Naira Policy</h2>
   <p>
-    This is a short paragraph of text to demonstrate the standard "medium"
-    column width, font size and line spacing of the template.
+    decrease in the use of physical cash, with most
+transactions being settled electronically through
+methods such as online banking, internet
+banking, Point of Sale (PoS), and Automated
+Teller Machines (ATMs). This has boosted ecommerce activities both domestically and
+cross-border, with cashless transactions
+recorded in Nigeria between January and April
+2021 totaling N81.54tn. According to data from
+the Nigeria Inter-Bank Settlement System
+(NIBSS, 2022), this amount increased by 44
+percent year-over-year to reach N117.33tn in
+2022.
   </p>
   <p>
     This is a second short paragraph of text to demonstrate the size of the
@@ -371,7 +383,7 @@
 </Section>
 
 {#if data.region.indicators}
-  <Media col="medium" caption="Source: ONS mid-year population estimates.">
+  <Media col="wide" caption="Source: CBN e-naira states estimates.">
     <div class="chart-sml">
       <BarChart
         data={[...data.region.indicators].sort((a, b) => a.pop - b.pop)}
@@ -381,9 +393,9 @@
         xFormatTick={(d) => d / 1e6}
         xSuffix="m"
         height={350}
-        padding={{ top: 0, bottom: 15, left: 140, right: 0 }}
+        padding={{ top: 20, bottom: 15, left: 140, right: 0 }}
         area={false}
-        title="Population by region/nation, 2020" />
+        title="E-nairra circulation by region/nation, 2022" />
     </div>
   </Media>
 {/if}
@@ -405,7 +417,7 @@
     col="wide"
     grid="narrow"
     gap={20}
-    caption="Source: ONS mid-year population estimates.">
+    caption="Source: CBN e-naira circulation estimates.">
     {#each [...data.region.indicators].sort((a, b) => b.pop - a.pop) as region}
       <div class="chart-sml">
         <LineChart
@@ -725,7 +737,7 @@
 {/if}
 
 <Divider />
-
+<!--
 <Section>
   <h2>How to use this template</h2>
   <p>
@@ -737,5 +749,5 @@
     .
   </p>
 </Section>
-
+-->
 <ONSFooter />

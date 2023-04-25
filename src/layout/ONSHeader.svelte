@@ -9,14 +9,14 @@
 
 <nav style="border-bottom-color: {themes[theme]['muted']}; {filled ? 'background-color: ' +  themes[theme]['background'] + ';' : ''}">
   <div class="col-wide middle" class:center>
-		<a href="https://www.ons.gov.uk/">
+		<a href="#">
 			<picture>
 				{#if theme == 'dark'}
-				<img src="./img/ons-logo-neg-en.svg" alt="Office for National Statistics">
+				<img src="./img/enaira-logo.png" alt="E-naira Statistics">
 				{:else if filled == true}
-				<img src="./img/ons-logo-pos-en.svg" alt="Office for National Statistics">
+				<img src="./img/enaira-logo.png" alt="E-naira Statistics">
 				{:else}
-				<img src="./img/ons-logo-black-en.svg" alt="Office for National Statistics">
+				<img src="./img/enaira-logo.png" alt="E-naira Statistics">
 				{/if}
 			</picture>
 		</a>
@@ -28,8 +28,8 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		position: relative;
-		height: 46px;
-		margin-bottom: -46px;
+		height: 66px;
+		margin-bottom: -26px;
 		border-bottom: 1px solid #777;
 		z-index: 1;
 	}
