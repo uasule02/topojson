@@ -24637,19 +24637,19 @@ uniform `+P+" "+z+" u_"+k+`;
 
     function get_each_context$9(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[36] = list[i];
+    	child_ctx[39] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[39] = list[i];
+    	child_ctx[42] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[36] = list[i];
+    	child_ctx[39] = list[i];
     	return child_ctx;
     }
 
@@ -24659,74 +24659,13 @@ uniform `+P+" "+z+" u_"+k+`;
     	return child_ctx;
     }
 
-    // (338:4) <Arrow color="white" {animation}>
-    function create_default_slot_18(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Scroll to begin");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_18.name,
-    		type: "slot",
-    		source: "(338:4) <Arrow color=\\\"white\\\" {animation}>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (319:0) <Header   bgcolor="#000fff"   bgfixed={true}   theme="dark"   center={false}   short={true}>
+    // (331:0) <Header   bgcolor="#0FFFF"   bgfixed={true}   theme="dark"   center={false}   short={true}>
     function create_default_slot_17(ctx) {
     	let h1;
     	let t1;
     	let p0;
     	let t3;
     	let p1;
-    	let t5;
-    	let p2;
-    	let toggle;
-    	let updating_checked;
-    	let t6;
-    	let div;
-    	let arrow;
-    	let current;
-
-    	function toggle_checked_binding(value) {
-    		/*toggle_checked_binding*/ ctx[21](value);
-    	}
-
-    	let toggle_props = {
-    		label: "Animation " + (/*animation*/ ctx[4] ? 'on' : 'off'),
-    		mono: true
-    	};
-
-    	if (/*animation*/ ctx[4] !== void 0) {
-    		toggle_props.checked = /*animation*/ ctx[4];
-    	}
-
-    	toggle = new Toggle({ props: toggle_props, $$inline: true });
-    	binding_callbacks.push(() => bind(toggle, 'checked', toggle_checked_binding));
-
-    	arrow = new Arrow({
-    			props: {
-    				color: "white",
-    				animation: /*animation*/ ctx[4],
-    				$$slots: { default: [create_default_slot_18] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
 
     	const block = {
     		c: function create() {
@@ -24737,23 +24676,17 @@ uniform `+P+" "+z+" u_"+k+`;
     			p0.textContent = "This is a short text description of e-naira usage across Nigeria.";
     			t3 = space();
     			p1 = element("p");
-    			p1.textContent = "DD MMM YYYY";
-    			t5 = space();
-    			p2 = element("p");
-    			create_component(toggle.$$.fragment);
-    			t6 = space();
-    			div = element("div");
-    			create_component(arrow.$$.fragment);
+    			p1.textContent = `${/*currentDate*/ ctx[21]}`;
     			set_style(h1, "margin-top", "5px");
-    			add_location(h1, file$s, 325, 2, 8433);
+    			set_style(h1, "color", "green");
+    			add_location(h1, file$s, 337, 2, 8724);
     			attr_dev(p0, "class", "text-big");
     			set_style(p0, "margin-top", "5px");
-    			add_location(p0, file$s, 326, 2, 8487);
+    			set_style(p0, "color", "green");
+    			add_location(p0, file$s, 338, 2, 8792);
     			set_style(p1, "margin-top", "20px");
-    			add_location(p1, file$s, 329, 2, 8611);
-    			add_location(p2, file$s, 330, 2, 8657);
-    			set_style(div, "margin-top", "40px");
-    			add_location(div, file$s, 336, 2, 8785);
+    			set_style(p1, "color", "green ");
+    			add_location(p1, file$s, 341, 2, 8930);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -24761,57 +24694,14 @@ uniform `+P+" "+z+" u_"+k+`;
     			insert_dev(target, p0, anchor);
     			insert_dev(target, t3, anchor);
     			insert_dev(target, p1, anchor);
-    			insert_dev(target, t5, anchor);
-    			insert_dev(target, p2, anchor);
-    			mount_component(toggle, p2, null);
-    			insert_dev(target, t6, anchor);
-    			insert_dev(target, div, anchor);
-    			mount_component(arrow, div, null);
-    			current = true;
     		},
-    		p: function update(ctx, dirty) {
-    			const toggle_changes = {};
-    			if (dirty[0] & /*animation*/ 16) toggle_changes.label = "Animation " + (/*animation*/ ctx[4] ? 'on' : 'off');
-
-    			if (!updating_checked && dirty[0] & /*animation*/ 16) {
-    				updating_checked = true;
-    				toggle_changes.checked = /*animation*/ ctx[4];
-    				add_flush_callback(() => updating_checked = false);
-    			}
-
-    			toggle.$set(toggle_changes);
-    			const arrow_changes = {};
-    			if (dirty[0] & /*animation*/ 16) arrow_changes.animation = /*animation*/ ctx[4];
-
-    			if (dirty[1] & /*$$scope*/ 32768) {
-    				arrow_changes.$$scope = { dirty, ctx };
-    			}
-
-    			arrow.$set(arrow_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(toggle.$$.fragment, local);
-    			transition_in(arrow.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(toggle.$$.fragment, local);
-    			transition_out(arrow.$$.fragment, local);
-    			current = false;
-    		},
+    		p: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h1);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t3);
     			if (detaching) detach_dev(p1);
-    			if (detaching) detach_dev(t5);
-    			if (detaching) detach_dev(p2);
-    			destroy_component(toggle);
-    			if (detaching) detach_dev(t6);
-    			if (detaching) detach_dev(div);
-    			destroy_component(arrow);
     		}
     	};
 
@@ -24819,14 +24709,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(319:0) <Header   bgcolor=\\\"#000fff\\\"   bgfixed={true}   theme=\\\"dark\\\"   center={false}   short={true}>",
+    		source: "(331:0) <Header   bgcolor=\\\"#0FFFF\\\"   bgfixed={true}   theme=\\\"dark\\\"   center={false}   short={true}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (349:0) <Section>
+    // (361:0) <Section>
     function create_default_slot_16(ctx) {
     	let h2;
     	let t1;
@@ -24835,6 +24725,9 @@ uniform `+P+" "+z+" u_"+k+`;
     	let p1;
     	let t5;
     	let blockquote;
+    	let t6;
+    	let br;
+    	let t7;
 
     	const block = {
     		c: function create() {
@@ -24845,15 +24738,18 @@ uniform `+P+" "+z+" u_"+k+`;
     			p0.textContent = "decrease in the use of physical cash, with most\ntransactions being settled electronically through\nmethods such as online banking, internet\nbanking, Point of Sale (PoS), and Automated\nTeller Machines (ATMs). This has boosted ecommerce activities both domestically and\ncross-border, with cashless transactions\nrecorded in Nigeria between January and April\n2021 totaling N81.54tn. According to data from\nthe Nigeria Inter-Bank Settlement System\n(NIBSS, 2022), this amount increased by 44\npercent year-over-year to reach N117.33tn in\n2022.";
     			t3 = space();
     			p1 = element("p");
-    			p1.textContent = "This is a second short paragraph of text to demonstrate the size of the\n    paragraph spacing in the template.";
+    			p1.textContent = "What are the direct benefits of the eNaira?";
     			t5 = space();
     			blockquote = element("blockquote");
-    			blockquote.textContent = "\"This is an example of a large embedded quotation.\"—A. Person";
-    			add_location(h2, file$s, 349, 2, 9073);
-    			add_location(p0, file$s, 350, 2, 9099);
-    			add_location(p1, file$s, 364, 2, 9652);
+    			t6 = text("\"The direct benefits of issuing eNaira vary depending on the specific context, but some\n    potential benefits include:\n    ");
+    			br = element("br");
+    			t7 = text("\n    Improved financial inclusion:\n    By providing a digital alternative to cash, eNaira\ncan make it easier for people who are unbanked\nor underbanked to access financial services.\n  \"");
+    			add_location(h2, file$s, 361, 2, 9417);
+    			add_location(p0, file$s, 362, 2, 9443);
+    			add_location(p1, file$s, 376, 2, 9996);
+    			add_location(br, file$s, 382, 4, 10218);
     			attr_dev(blockquote, "class", "text-indent");
-    			add_location(blockquote, file$s, 368, 2, 9780);
+    			add_location(blockquote, file$s, 379, 2, 10057);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -24863,6 +24759,9 @@ uniform `+P+" "+z+" u_"+k+`;
     			insert_dev(target, p1, anchor);
     			insert_dev(target, t5, anchor);
     			insert_dev(target, blockquote, anchor);
+    			append_dev(blockquote, t6);
+    			append_dev(blockquote, br);
+    			append_dev(blockquote, t7);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h2);
@@ -24879,14 +24778,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(349:0) <Section>",
+    		source: "(361:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (376:0) <Section>
+    // (394:0) <Section>
     function create_default_slot_15(ctx) {
     	let h2;
     	let t1;
@@ -24895,12 +24794,12 @@ uniform `+P+" "+z+" u_"+k+`;
     	const block = {
     		c: function create() {
     			h2 = element("h2");
-    			h2.textContent = "Embedded charts or media";
+    			h2.textContent = "Distribution and circulation of e-naira";
     			t1 = space();
     			p = element("p");
-    			p.textContent = "Below is an embedded chart. It is set to the same width as the column,\n    \"medium\" (680px), but could also be \"narrow\" (540px), \"wide\" (980px) or\n    \"full\" width. All options are responsive to fit the width of narrow screens.";
-    			add_location(h2, file$s, 376, 2, 9938);
-    			add_location(p, file$s, 377, 2, 9974);
+    			p.textContent = "Below is a distribution chart of e-naira. It is display the distribution within the states of Nigeria.";
+    			add_location(h2, file$s, 394, 2, 10462);
+    			add_location(p, file$s, 395, 2, 10513);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -24918,14 +24817,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(376:0) <Section>",
+    		source: "(394:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (385:0) {#if data.region.indicators}
+    // (401:0) {#if data.region.indicators}
     function create_if_block_6$2(ctx) {
     	let media;
     	let current;
@@ -24951,7 +24850,7 @@ uniform `+P+" "+z+" u_"+k+`;
     		p: function update(ctx, dirty) {
     			const media_changes = {};
 
-    			if (dirty[0] & /*data*/ 32 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[0] & /*data*/ 16 | dirty[1] & /*$$scope*/ 262144) {
     				media_changes.$$scope = { dirty, ctx };
     			}
 
@@ -24975,14 +24874,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_if_block_6$2.name,
     		type: "if",
-    		source: "(385:0) {#if data.region.indicators}",
+    		source: "(401:0) {#if data.region.indicators}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (386:2) <Media col="wide" caption="Source: CBN e-naira states estimates.">
+    // (402:2) <Media col="wide" caption="Source: CBN e-naira states estimates.">
     function create_default_slot_14(ctx) {
     	let div;
     	let barchart;
@@ -24990,12 +24889,13 @@ uniform `+P+" "+z+" u_"+k+`;
 
     	barchart = new BarChart({
     			props: {
-    				data: [.../*data*/ ctx[5].region.indicators].sort(func$1),
+    				data: [.../*data*/ ctx[4].region.indicators].sort(func$1),
     				xKey: "pop",
     				yKey: "name",
     				snapTicks: false,
     				xFormatTick: func_1,
     				xSuffix: "m",
+    				color: "green",
     				height: 350,
     				padding: { top: 20, bottom: 15, left: 140, right: 0 },
     				area: false,
@@ -25009,7 +24909,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			div = element("div");
     			create_component(barchart.$$.fragment);
     			attr_dev(div, "class", "chart-sml svelte-xshzp7");
-    			add_location(div, file$s, 386, 4, 10331);
+    			add_location(div, file$s, 402, 4, 10745);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -25018,7 +24918,7 @@ uniform `+P+" "+z+" u_"+k+`;
     		},
     		p: function update(ctx, dirty) {
     			const barchart_changes = {};
-    			if (dirty[0] & /*data*/ 32) barchart_changes.data = [.../*data*/ ctx[5].region.indicators].sort(func$1);
+    			if (dirty[0] & /*data*/ 16) barchart_changes.data = [.../*data*/ ctx[4].region.indicators].sort(func$1);
     			barchart.$set(barchart_changes);
     		},
     		i: function intro(local) {
@@ -25040,14 +24940,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(386:2) <Media col=\\\"wide\\\" caption=\\\"Source: CBN e-naira states estimates.\\\">",
+    		source: "(402:2) <Media col=\\\"wide\\\" caption=\\\"Source: CBN e-naira states estimates.\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (405:0) <Section>
+    // (423:0) <Section>
     function create_default_slot_13(ctx) {
     	let h2;
     	let t1;
@@ -25056,12 +24956,12 @@ uniform `+P+" "+z+" u_"+k+`;
     	const block = {
     		c: function create() {
     			h2 = element("h2");
-    			h2.textContent = "Gridded charts or media";
+    			h2.textContent = "Transaction charts of e-naira of states";
     			t1 = space();
     			p = element("p");
-    			p.textContent = "Below is a grid that can contain charts or any other kind of visual media.\n    The grid can fit in a medium, wide or full-width column, and the media width\n    itself can be narrow (min 200px), medium (min 300px), wide (min 500px) or\n    full-width. The grid is responsive, and will re-flow on smaller screens.";
-    			add_location(h2, file$s, 405, 2, 10788);
-    			add_location(p, file$s, 406, 2, 10823);
+    			p.textContent = "eNaira can provide more accurate and granular \ndata on economic activity and monetary policy \ntransmission mechanisms.\nIt's important to note that the Bank is aware of \nthe potential risks and challenges associated \nwith issuing eNaira, such as the potential for \nincreased financial instability, privacy concerns, \nand the need for significant investments in new \ntechnology and infrastructure. Adequate \nmeasures are in place to ensure that this risk is\nmitigated to the barest minimum.";
+    			add_location(h2, file$s, 423, 2, 11232);
+    			add_location(p, file$s, 424, 2, 11284);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -25079,14 +24979,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(405:0) <Section>",
+    		source: "(423:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (415:0) {#if data.region.timeseries && data.region.indicators}
+    // (441:0) {#if data.region.timeseries && data.region.indicators}
     function create_if_block_5$3(ctx) {
     	let media;
     	let current;
@@ -25114,7 +25014,7 @@ uniform `+P+" "+z+" u_"+k+`;
     		p: function update(ctx, dirty) {
     			const media_changes = {};
 
-    			if (dirty[0] & /*data*/ 32 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[0] & /*data*/ 16 | dirty[1] & /*$$scope*/ 262144) {
     				media_changes.$$scope = { dirty, ctx };
     			}
 
@@ -25138,14 +25038,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_if_block_5$3.name,
     		type: "if",
-    		source: "(415:0) {#if data.region.timeseries && data.region.indicators}",
+    		source: "(441:0) {#if data.region.timeseries && data.region.indicators}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (421:4) {#each [...data.region.indicators].sort((a, b) => b.pop - a.pop) as region}
+    // (447:4) {#each [...data.region.indicators].sort((a, b) => b.pop - a.pop) as region}
     function create_each_block_3(ctx) {
     	let div;
     	let linechart;
@@ -25154,11 +25054,11 @@ uniform `+P+" "+z+" u_"+k+`;
 
     	linechart = new LineChart({
     			props: {
-    				data: /*data*/ ctx[5].region.timeseries,
+    				data: /*data*/ ctx[4].region.timeseries,
     				xKey: "year",
     				yKey: "value",
     				zKey: "code",
-    				color: "lightgrey",
+    				color: "green",
     				lineWidth: 1,
     				xTicks: 2,
     				snapTicks: false,
@@ -25179,7 +25079,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			create_component(linechart.$$.fragment);
     			t = space();
     			attr_dev(div, "class", "chart-sml svelte-xshzp7");
-    			add_location(div, file$s, 421, 6, 11415);
+    			add_location(div, file$s, 447, 6, 12055);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -25189,9 +25089,9 @@ uniform `+P+" "+z+" u_"+k+`;
     		},
     		p: function update(ctx, dirty) {
     			const linechart_changes = {};
-    			if (dirty[0] & /*data*/ 32) linechart_changes.data = /*data*/ ctx[5].region.timeseries;
-    			if (dirty[0] & /*data*/ 32) linechart_changes.selected = /*region*/ ctx[3].code;
-    			if (dirty[0] & /*data*/ 32) linechart_changes.title = /*region*/ ctx[3].name;
+    			if (dirty[0] & /*data*/ 16) linechart_changes.data = /*data*/ ctx[4].region.timeseries;
+    			if (dirty[0] & /*data*/ 16) linechart_changes.selected = /*region*/ ctx[3].code;
+    			if (dirty[0] & /*data*/ 16) linechart_changes.title = /*region*/ ctx[3].name;
     			linechart.$set(linechart_changes);
     		},
     		i: function intro(local) {
@@ -25213,18 +25113,18 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(421:4) {#each [...data.region.indicators].sort((a, b) => b.pop - a.pop) as region}",
+    		source: "(447:4) {#each [...data.region.indicators].sort((a, b) => b.pop - a.pop) as region}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (416:2) <Media     col="wide"     grid="narrow"     gap={20}     caption="Source: CBN e-naira circulation estimates.">
+    // (442:2) <Media     col="wide"     grid="narrow"     gap={20}     caption="Source: CBN e-naira circulation estimates.">
     function create_default_slot_12(ctx) {
     	let each_1_anchor;
     	let current;
-    	let each_value_3 = [.../*data*/ ctx[5].region.indicators].sort(func_2);
+    	let each_value_3 = [.../*data*/ ctx[4].region.indicators].sort(func_2);
     	validate_each_argument(each_value_3);
     	let each_blocks = [];
 
@@ -25253,8 +25153,8 @@ uniform `+P+" "+z+" u_"+k+`;
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*data*/ 32) {
-    				each_value_3 = [.../*data*/ ctx[5].region.indicators].sort(func_2);
+    			if (dirty[0] & /*data*/ 16) {
+    				each_value_3 = [.../*data*/ ctx[4].region.indicators].sort(func_2);
     				validate_each_argument(each_value_3);
     				let i;
 
@@ -25309,14 +25209,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(416:2) <Media     col=\\\"wide\\\"     grid=\\\"narrow\\\"     gap={20}     caption=\\\"Source: CBN e-naira circulation estimates.\\\">",
+    		source: "(442:2) <Media     col=\\\"wide\\\"     grid=\\\"narrow\\\"     gap={20}     caption=\\\"Source: CBN e-naira circulation estimates.\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (446:0) <Section>
+    // (472:0) <Section>
     function create_default_slot_11(ctx) {
     	let h2;
     	let t1;
@@ -25327,16 +25227,16 @@ uniform `+P+" "+z+" u_"+k+`;
     	const block = {
     		c: function create() {
     			h2 = element("h2");
-    			h2.textContent = "This is a dynamic chart section";
+    			h2.textContent = "The usage of e-naira in LGAs of Nigeria";
     			t1 = space();
     			p0 = element("p");
-    			p0.textContent = "The chart below will respond to the captions as you scroll down. The\n    \"Scroller\" component is set to \"splitscreen\" mode, which means the captions\n    will be on the left side on larger screens.";
+    			p0.textContent = "eNaira is a digital version of Nigeria’s\nfiat currency, issued and backed by the \ncountry's central bank. It is designed to coexist \nwith physical Naira (cash) and bank deposits \nand can be used for making digital payments, \njust like other digital currencies.";
     			t3 = space();
     			p1 = element("p");
-    			p1.textContent = "The interactions are via Javascript functions that are called when each\n    caption scrolls into view.";
-    			add_location(h2, file$s, 446, 2, 11971);
-    			add_location(p0, file$s, 447, 2, 12014);
-    			add_location(p1, file$s, 452, 2, 12228);
+    			p1.textContent = "Here are some preventive measures that are\ntaken by CBN and other financial institutions to \nprevent fraud:";
+    			add_location(h2, file$s, 472, 2, 12607);
+    			add_location(p0, file$s, 473, 2, 12658);
+    			add_location(p1, file$s, 481, 2, 12936);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -25358,14 +25258,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(446:0) <Section>",
+    		source: "(472:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (463:8) {#if data.district.indicators && metadata.region.lookup}
+    // (493:8) {#if data.district.indicators && metadata.region.lookup}
     function create_if_block_4$4(ctx) {
     	let div;
     	let scatterchart;
@@ -25374,12 +25274,12 @@ uniform `+P+" "+z+" u_"+k+`;
     	scatterchart = new ScatterChart({
     			props: {
     				height: "calc(100vh - 150px)",
-    				data: /*data*/ ctx[5].district.indicators.map(/*func_4*/ ctx[23]),
-    				colors: /*explore*/ ctx[15] ? ['lightgrey'] : colors.cat,
-    				xKey: /*xKey*/ ctx[10],
-    				yKey: /*yKey*/ ctx[11],
-    				zKey: /*zKey*/ ctx[12],
-    				rKey: /*rKey*/ ctx[13],
+    				data: /*data*/ ctx[4].district.indicators.map(/*func_4*/ ctx[23]),
+    				colors: /*explore*/ ctx[14] ? ['green'] : colors.cat,
+    				xKey: /*xKey*/ ctx[9],
+    				yKey: /*yKey*/ ctx[10],
+    				zKey: /*zKey*/ ctx[11],
+    				rKey: /*rKey*/ ctx[12],
     				idKey: "code",
     				labelKey: "name",
     				r: [3, 10],
@@ -25388,17 +25288,17 @@ uniform `+P+" "+z+" u_"+k+`;
     				xFormatTick: func_5,
     				xSuffix: " sq.km",
     				yFormatTick: func_6,
-    				legend: /*zKey*/ ctx[12] != null,
+    				legend: /*zKey*/ ctx[11] != null,
     				labels: true,
-    				select: /*explore*/ ctx[15],
-    				selected: /*explore*/ ctx[15] ? /*selected*/ ctx[2] : null,
+    				select: /*explore*/ ctx[14],
+    				selected: /*explore*/ ctx[14] ? /*selected*/ ctx[2] : null,
     				hover: true,
-    				hovered: /*hovered*/ ctx[8],
-    				highlighted: /*explore*/ ctx[15] ? /*chartHighlighted*/ ctx[16] : [],
+    				hovered: /*hovered*/ ctx[7],
+    				highlighted: /*explore*/ ctx[14] ? /*chartHighlighted*/ ctx[15] : [],
     				colorSelect: "#206095",
     				colorHighlight: "#999",
     				overlayFill: true,
-    				animation: /*animation*/ ctx[4]
+    				animation: /*animation*/ ctx[16]
     			},
     			$$inline: true
     		});
@@ -25411,7 +25311,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			div = element("div");
     			create_component(scatterchart.$$.fragment);
     			attr_dev(div, "class", "chart svelte-xshzp7");
-    			add_location(div, file$s, 463, 10, 12577);
+    			add_location(div, file$s, 493, 10, 13290);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -25420,18 +25320,17 @@ uniform `+P+" "+z+" u_"+k+`;
     		},
     		p: function update(ctx, dirty) {
     			const scatterchart_changes = {};
-    			if (dirty[0] & /*data, metadata*/ 34) scatterchart_changes.data = /*data*/ ctx[5].district.indicators.map(/*func_4*/ ctx[23]);
-    			if (dirty[0] & /*explore*/ 32768) scatterchart_changes.colors = /*explore*/ ctx[15] ? ['lightgrey'] : colors.cat;
-    			if (dirty[0] & /*xKey*/ 1024) scatterchart_changes.xKey = /*xKey*/ ctx[10];
-    			if (dirty[0] & /*yKey*/ 2048) scatterchart_changes.yKey = /*yKey*/ ctx[11];
-    			if (dirty[0] & /*zKey*/ 4096) scatterchart_changes.zKey = /*zKey*/ ctx[12];
-    			if (dirty[0] & /*rKey*/ 8192) scatterchart_changes.rKey = /*rKey*/ ctx[13];
-    			if (dirty[0] & /*zKey*/ 4096) scatterchart_changes.legend = /*zKey*/ ctx[12] != null;
-    			if (dirty[0] & /*explore*/ 32768) scatterchart_changes.select = /*explore*/ ctx[15];
-    			if (dirty[0] & /*explore, selected*/ 32772) scatterchart_changes.selected = /*explore*/ ctx[15] ? /*selected*/ ctx[2] : null;
-    			if (dirty[0] & /*hovered*/ 256) scatterchart_changes.hovered = /*hovered*/ ctx[8];
-    			if (dirty[0] & /*explore, chartHighlighted*/ 98304) scatterchart_changes.highlighted = /*explore*/ ctx[15] ? /*chartHighlighted*/ ctx[16] : [];
-    			if (dirty[0] & /*animation*/ 16) scatterchart_changes.animation = /*animation*/ ctx[4];
+    			if (dirty[0] & /*data, metadata*/ 18) scatterchart_changes.data = /*data*/ ctx[4].district.indicators.map(/*func_4*/ ctx[23]);
+    			if (dirty[0] & /*explore*/ 16384) scatterchart_changes.colors = /*explore*/ ctx[14] ? ['green'] : colors.cat;
+    			if (dirty[0] & /*xKey*/ 512) scatterchart_changes.xKey = /*xKey*/ ctx[9];
+    			if (dirty[0] & /*yKey*/ 1024) scatterchart_changes.yKey = /*yKey*/ ctx[10];
+    			if (dirty[0] & /*zKey*/ 2048) scatterchart_changes.zKey = /*zKey*/ ctx[11];
+    			if (dirty[0] & /*rKey*/ 4096) scatterchart_changes.rKey = /*rKey*/ ctx[12];
+    			if (dirty[0] & /*zKey*/ 2048) scatterchart_changes.legend = /*zKey*/ ctx[11] != null;
+    			if (dirty[0] & /*explore*/ 16384) scatterchart_changes.select = /*explore*/ ctx[14];
+    			if (dirty[0] & /*explore, selected*/ 16388) scatterchart_changes.selected = /*explore*/ ctx[14] ? /*selected*/ ctx[2] : null;
+    			if (dirty[0] & /*hovered*/ 128) scatterchart_changes.hovered = /*hovered*/ ctx[7];
+    			if (dirty[0] & /*explore, chartHighlighted*/ 49152) scatterchart_changes.highlighted = /*explore*/ ctx[14] ? /*chartHighlighted*/ ctx[15] : [];
     			scatterchart.$set(scatterchart_changes);
     		},
     		i: function intro(local) {
@@ -25453,20 +25352,20 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_if_block_4$4.name,
     		type: "if",
-    		source: "(463:8) {#if data.district.indicators && metadata.region.lookup}",
+    		source: "(493:8) {#if data.district.indicators && metadata.region.lookup}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (460:2) 
+    // (490:2) 
     function create_background_slot_1(ctx) {
     	let div1;
     	let figure;
     	let div0;
     	let current;
-    	let if_block = /*data*/ ctx[5].district.indicators && /*metadata*/ ctx[1].region.lookup && create_if_block_4$4(ctx);
+    	let if_block = /*data*/ ctx[4].district.indicators && /*metadata*/ ctx[1].region.lookup && create_if_block_4$4(ctx);
 
     	const block = {
     		c: function create() {
@@ -25475,10 +25374,10 @@ uniform `+P+" "+z+" u_"+k+`;
     			div0 = element("div");
     			if (if_block) if_block.c();
     			attr_dev(div0, "class", "col-wide height-full");
-    			add_location(div0, file$s, 461, 6, 12467);
-    			add_location(figure, file$s, 460, 4, 12452);
+    			add_location(div0, file$s, 491, 6, 13180);
+    			add_location(figure, file$s, 490, 4, 13165);
     			attr_dev(div1, "slot", "background");
-    			add_location(div1, file$s, 459, 2, 12424);
+    			add_location(div1, file$s, 489, 2, 13137);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -25488,11 +25387,11 @@ uniform `+P+" "+z+" u_"+k+`;
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (/*data*/ ctx[5].district.indicators && /*metadata*/ ctx[1].region.lookup) {
+    			if (/*data*/ ctx[4].district.indicators && /*metadata*/ ctx[1].region.lookup) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
-    					if (dirty[0] & /*data, metadata*/ 34) {
+    					if (dirty[0] & /*data, metadata*/ 18) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -25530,14 +25429,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_background_slot_1.name,
     		type: "slot",
-    		source: "(460:2) ",
+    		source: "(490:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (549:8) {#if geojson}
+    // (576:8) {#if geojson}
     function create_if_block_3$4(ctx) {
     	let p;
     	let select;
@@ -25545,7 +25444,7 @@ uniform `+P+" "+z+" u_"+k+`;
     	let option_value_value;
     	let mounted;
     	let dispose;
-    	let each_value_2 = /*geojson*/ ctx[6].features;
+    	let each_value_2 = /*geojson*/ ctx[5].features;
     	validate_each_argument(each_value_2);
     	let each_blocks = [];
 
@@ -25566,11 +25465,11 @@ uniform `+P+" "+z+" u_"+k+`;
 
     			option.__value = option_value_value = null;
     			option.value = option.__value;
-    			add_location(option, file$s, 552, 14, 15309);
+    			add_location(option, file$s, 579, 14, 15923);
     			attr_dev(select, "class", "svelte-xshzp7");
     			if (/*selected*/ ctx[2] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[22].call(select));
-    			add_location(select, file$s, 551, 12, 15264);
-    			add_location(p, file$s, 549, 10, 15196);
+    			add_location(select, file$s, 578, 12, 15878);
+    			add_location(p, file$s, 576, 10, 15810);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -25589,8 +25488,8 @@ uniform `+P+" "+z+" u_"+k+`;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*geojson*/ 64) {
-    				each_value_2 = /*geojson*/ ctx[6].features;
+    			if (dirty[0] & /*geojson*/ 32) {
+    				each_value_2 = /*geojson*/ ctx[5].features;
     				validate_each_argument(each_value_2);
     				let i;
 
@@ -25613,7 +25512,7 @@ uniform `+P+" "+z+" u_"+k+`;
     				each_blocks.length = each_value_2.length;
     			}
 
-    			if (dirty[0] & /*selected, geojson*/ 68) {
+    			if (dirty[0] & /*selected, geojson*/ 36) {
     				select_option(select, /*selected*/ ctx[2]);
     			}
     		},
@@ -25629,17 +25528,17 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_if_block_3$4.name,
     		type: "if",
-    		source: "(549:8) {#if geojson}",
+    		source: "(576:8) {#if geojson}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (554:14) {#each geojson.features as place}
+    // (581:14) {#each geojson.features as place}
     function create_each_block_2(ctx) {
     	let option;
-    	let t0_value = /*place*/ ctx[36].properties.AREANM + "";
+    	let t0_value = /*place*/ ctx[39].properties.AREANM + "";
     	let t0;
     	let t1;
     	let option_value_value;
@@ -25649,9 +25548,9 @@ uniform `+P+" "+z+" u_"+k+`;
     			option = element("option");
     			t0 = text(t0_value);
     			t1 = space();
-    			option.__value = option_value_value = /*place*/ ctx[36].properties.AREACD;
+    			option.__value = option_value_value = /*place*/ ctx[39].properties.AREACD;
     			option.value = option.__value;
-    			add_location(option, file$s, 554, 16, 15414);
+    			add_location(option, file$s, 581, 16, 16028);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -25659,9 +25558,9 @@ uniform `+P+" "+z+" u_"+k+`;
     			append_dev(option, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*geojson*/ 64 && t0_value !== (t0_value = /*place*/ ctx[36].properties.AREANM + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*geojson*/ 32 && t0_value !== (t0_value = /*place*/ ctx[39].properties.AREANM + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*geojson*/ 64 && option_value_value !== (option_value_value = /*place*/ ctx[36].properties.AREACD)) {
+    			if (dirty[0] & /*geojson*/ 32 && option_value_value !== (option_value_value = /*place*/ ctx[39].properties.AREACD)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -25675,14 +25574,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(554:14) {#each geojson.features as place}",
+    		source: "(581:14) {#each geojson.features as place}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (503:2) 
+    // (533:2) 
     function create_foreground_slot_1(ctx) {
     	let div5;
     	let section0;
@@ -25719,7 +25618,7 @@ uniform `+P+" "+z+" u_"+k+`;
     	let t17;
     	let p4;
     	let t19;
-    	let if_block = /*geojson*/ ctx[6] && create_if_block_3$4(ctx);
+    	let if_block = /*geojson*/ ctx[5] && create_if_block_3$4(ctx);
 
     	const block = {
     		c: function create() {
@@ -25729,74 +25628,74 @@ uniform `+P+" "+z+" u_"+k+`;
     			p0 = element("p");
     			t0 = text("This chart shows the\n          ");
     			strong0 = element("strong");
-    			strong0.textContent = "area in square kilometres";
-    			t2 = text("\n          of each local authority district in the Nigeria. Each circle\n          represents one district. The scale is logarithmic.");
+    			strong0.textContent = "e-naira transaction in all LGAs in Nigeia.";
+    			t2 = text("\n           Each circle represents one district of local authority district in the Nigeria.");
     			t3 = space();
     			section1 = element("section");
     			div1 = element("div");
     			p1 = element("p");
-    			t4 = text("The radius of each circle shows the\n          ");
+    			t4 = text("The following chart shows the growth rate \n          ");
     			strong1 = element("strong");
-    			strong1.textContent = "total population";
-    			t6 = text("\n          of the district.");
+    			strong1.textContent = "of e-naira transaction";
+    			t6 = text("\n          in all LGAs.");
     			t7 = space();
     			section2 = element("section");
     			div2 = element("div");
     			p2 = element("p");
-    			t8 = text("The vertical axis shows the\n          ");
+    			t8 = text("This shows the usage density \n          ");
     			strong2 = element("strong");
-    			strong2.textContent = "density";
-    			t10 = text("\n          of the district in people per hectare.");
+    			strong2.textContent = "of e-naira";
+    			t10 = text("\n          per people of the LGAs.");
     			t11 = space();
     			section3 = element("section");
     			div3 = element("div");
     			p3 = element("p");
-    			t12 = text("The colour of each circle shows the\n          ");
+    			t12 = text("The colour of each circle (LGAs) shows the\n          ");
     			strong3 = element("strong");
-    			strong3.textContent = "part of the country";
-    			t14 = text("\n          that the district is within.");
+    			strong3.textContent = "the gap needed in transcation of e-naira";
+    			t14 = text("\n          that the LGAs is within.");
     			t15 = space();
     			section4 = element("section");
     			div4 = element("div");
     			h3 = element("h3");
-    			h3.textContent = "Select a district";
+    			h3.textContent = "Select LGA";
     			t17 = space();
     			p4 = element("p");
-    			p4.textContent = "Use the selection box below or click on the chart to select a\n          district. The chart will also highlight the other districts in the\n          same part of the country.";
+    			p4.textContent = "The chart will also highlight the other LGAs with most usage e-naira in the country.";
     			t19 = space();
     			if (if_block) if_block.c();
-    			add_location(strong0, file$s, 507, 10, 13921);
-    			add_location(p0, file$s, 505, 8, 13876);
+    			add_location(strong0, file$s, 537, 10, 14630);
+    			add_location(p0, file$s, 535, 8, 14585);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file$s, 504, 6, 13843);
+    			add_location(div0, file$s, 534, 6, 14552);
     			attr_dev(section0, "data-id", "chart01");
-    			add_location(section0, file$s, 503, 4, 13809);
-    			add_location(strong1, file$s, 517, 10, 14268);
-    			add_location(p1, file$s, 515, 8, 14208);
+    			add_location(section0, file$s, 533, 4, 14518);
+    			add_location(strong1, file$s, 546, 10, 14960);
+    			add_location(p1, file$s, 544, 8, 14893);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file$s, 514, 6, 14175);
+    			add_location(div1, file$s, 543, 6, 14860);
     			attr_dev(section1, "data-id", "chart02");
-    			add_location(section1, file$s, 513, 4, 14141);
-    			add_location(strong2, file$s, 526, 10, 14493);
-    			add_location(p2, file$s, 524, 8, 14441);
+    			add_location(section1, file$s, 542, 4, 14826);
+    			add_location(strong2, file$s, 555, 10, 15191);
+    			add_location(p2, file$s, 553, 8, 15136);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file$s, 523, 6, 14408);
+    			add_location(div2, file$s, 552, 6, 15103);
     			attr_dev(section2, "data-id", "chart03");
-    			add_location(section2, file$s, 522, 4, 14374);
-    			add_location(strong3, file$s, 535, 10, 14739);
-    			add_location(p3, file$s, 533, 8, 14679);
+    			add_location(section2, file$s, 551, 4, 15069);
+    			add_location(strong3, file$s, 564, 10, 15433);
+    			add_location(p3, file$s, 562, 8, 15366);
     			attr_dev(div3, "class", "col-medium");
-    			add_location(div3, file$s, 532, 6, 14646);
+    			add_location(div3, file$s, 561, 6, 15333);
     			attr_dev(section3, "data-id", "chart04");
-    			add_location(section3, file$s, 531, 4, 14612);
-    			add_location(h3, file$s, 542, 8, 14927);
-    			add_location(p4, file$s, 543, 8, 14962);
+    			add_location(section3, file$s, 560, 4, 15299);
+    			add_location(h3, file$s, 571, 8, 15638);
+    			add_location(p4, file$s, 572, 8, 15666);
     			attr_dev(div4, "class", "col-medium");
-    			add_location(div4, file$s, 541, 6, 14894);
+    			add_location(div4, file$s, 570, 6, 15605);
     			attr_dev(section4, "data-id", "chart05");
-    			add_location(section4, file$s, 540, 4, 14860);
+    			add_location(section4, file$s, 569, 4, 15571);
     			attr_dev(div5, "slot", "foreground");
-    			add_location(div5, file$s, 502, 2, 13781);
+    			add_location(div5, file$s, 532, 2, 14490);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -25837,7 +25736,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			if (if_block) if_block.m(div4, null);
     		},
     		p: function update(ctx, dirty) {
-    			if (/*geojson*/ ctx[6]) {
+    			if (/*geojson*/ ctx[5]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -25860,14 +25759,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_foreground_slot_1.name,
     		type: "slot",
-    		source: "(503:2) ",
+    		source: "(533:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (569:0) <Section>
+    // (596:0) <Section>
     function create_default_slot_10(ctx) {
     	let h2;
     	let t1;
@@ -25878,15 +25777,15 @@ uniform `+P+" "+z+" u_"+k+`;
     	const block = {
     		c: function create() {
     			h2 = element("h2");
-    			h2.textContent = "This is a full-width chart demo";
+    			h2.textContent = "This standard deviation of e-naira";
     			t1 = space();
     			p0 = element("p");
-    			p0.textContent = "Below is an example of a media grid where the column with is set to \"full\".\n    This allows for full width images and charts.";
+    			p0.textContent = "The overriding objective for introducing the \neNaira is that households and businesses can \nmake fast, efficient, and reliable payments, and \nbenefit from a resilient, inclusive, innovative, and \ninexpensive payment system.";
     			t3 = space();
     			p1 = element("p");
-    			add_location(h2, file$s, 569, 2, 15673);
-    			add_location(p0, file$s, 570, 2, 15716);
-    			add_location(p1, file$s, 574, 2, 15859);
+    			add_location(h2, file$s, 596, 2, 16287);
+    			add_location(p0, file$s, 597, 2, 16334);
+    			add_location(p1, file$s, 604, 2, 16575);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -25908,39 +25807,39 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(569:0) <Section>",
+    		source: "(596:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (584:4) {#if data.district.timeseries}
+    // (613:4) {#if data.district.timeseries}
     function create_if_block_2$6(ctx) {
     	let linechart;
     	let current;
 
     	linechart = new LineChart({
     			props: {
-    				data: /*data*/ ctx[5].district.timeseries,
+    				data: /*data*/ ctx[4].district.timeseries,
     				padding: { left: 50, right: 150, top: 0, bottom: 0 },
     				height: "500px",
     				xKey: "year",
     				yKey: "value",
     				zKey: "code",
-    				color: "lightgrey",
+    				color: "green",
     				lineWidth: 1,
     				yFormatTick: func_7,
     				ySuffix: "m",
     				select: true,
     				selected: /*selected*/ ctx[2],
     				hover: true,
-    				hovered: /*hovered*/ ctx[8],
-    				highlighted: /*chartHighlighted*/ ctx[16],
+    				hovered: /*hovered*/ ctx[7],
+    				highlighted: /*chartHighlighted*/ ctx[15],
     				colorSelect: "#206095",
     				colorHighlight: "#999",
     				area: false,
-    				title: "Mid-year population by district, 2001 to 2020",
+    				title: "2years transction by district, 2020 to 2022",
     				labels: true,
     				labelKey: "name"
     			},
@@ -25960,10 +25859,10 @@ uniform `+P+" "+z+" u_"+k+`;
     		},
     		p: function update(ctx, dirty) {
     			const linechart_changes = {};
-    			if (dirty[0] & /*data*/ 32) linechart_changes.data = /*data*/ ctx[5].district.timeseries;
+    			if (dirty[0] & /*data*/ 16) linechart_changes.data = /*data*/ ctx[4].district.timeseries;
     			if (dirty[0] & /*selected*/ 4) linechart_changes.selected = /*selected*/ ctx[2];
-    			if (dirty[0] & /*hovered*/ 256) linechart_changes.hovered = /*hovered*/ ctx[8];
-    			if (dirty[0] & /*chartHighlighted*/ 65536) linechart_changes.highlighted = /*chartHighlighted*/ ctx[16];
+    			if (dirty[0] & /*hovered*/ 128) linechart_changes.hovered = /*hovered*/ ctx[7];
+    			if (dirty[0] & /*chartHighlighted*/ 32768) linechart_changes.highlighted = /*chartHighlighted*/ ctx[15];
     			linechart.$set(linechart_changes);
     		},
     		i: function intro(local) {
@@ -25984,25 +25883,25 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_if_block_2$6.name,
     		type: "if",
-    		source: "(584:4) {#if data.district.timeseries}",
+    		source: "(613:4) {#if data.district.timeseries}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (578:0) <Media   col="full"   height={600}   caption="This is an optional caption for the above chart or media. It can   contain HTML code and wrap onto multiple lines.">
+    // (608:0) <Media   col="full"   height={600}   caption="Line distribution of e-naira ">
     function create_default_slot_9(ctx) {
     	let div;
     	let current;
-    	let if_block = /*data*/ ctx[5].district.timeseries && create_if_block_2$6(ctx);
+    	let if_block = /*data*/ ctx[4].district.timeseries && create_if_block_2$6(ctx);
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			if (if_block) if_block.c();
     			attr_dev(div, "class", "chart-full svelte-xshzp7");
-    			add_location(div, file$s, 582, 2, 16042);
+    			add_location(div, file$s, 611, 2, 16673);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -26010,11 +25909,11 @@ uniform `+P+" "+z+" u_"+k+`;
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (/*data*/ ctx[5].district.timeseries) {
+    			if (/*data*/ ctx[4].district.timeseries) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
-    					if (dirty[0] & /*data*/ 32) {
+    					if (dirty[0] & /*data*/ 16) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -26052,14 +25951,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(578:0) <Media   col=\\\"full\\\"   height={600}   caption=\\\"This is an optional caption for the above chart or media. It can   contain HTML code and wrap onto multiple lines.\\\">",
+    		source: "(608:0) <Media   col=\\\"full\\\"   height={600}   caption=\\\"Line distribution of e-naira \\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (615:0) <Section>
+    // (644:0) <Section>
     function create_default_slot_8(ctx) {
     	let h2;
     	let t1;
@@ -26068,13 +25967,13 @@ uniform `+P+" "+z+" u_"+k+`;
     	const block = {
     		c: function create() {
     			h2 = element("h2");
-    			h2.textContent = "This is a dynamic map section";
+    			h2.textContent = "The shows the area and circulation of e-naira";
     			t1 = space();
     			p = element("p");
-    			p.textContent = "The map below will respond to the captions as you scroll down. The scroller\n    is not set to splitscreen, so captions are placed over the map on any screen\n    size.";
-    			add_location(h2, file$s, 615, 2, 16823);
+    			p.textContent = "The below map shows the details area of the most and least usage and adoption of e-naira";
+    			add_location(h2, file$s, 644, 2, 17448);
     			attr_dev(p, "class", "mb");
-    			add_location(p, file$s, 616, 2, 16864);
+    			add_location(p, file$s, 645, 2, 17505);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -26092,14 +25991,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(615:0) <Section>",
+    		source: "(644:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (624:0) {#if geojson && data.district.indicators}
+    // (651:0) {#if geojson && data.district.indicators}
     function create_if_block$l(ctx) {
     	let scroller;
     	let updating_id;
@@ -26136,7 +26035,7 @@ uniform `+P+" "+z+" u_"+k+`;
     		p: function update(ctx, dirty) {
     			const scroller_changes = {};
 
-    			if (dirty[0] & /*selected, geojson, data, map, mapKey, explore, hovered, mapHighlighted, metadata*/ 50150 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[0] & /*selected, geojson, data, map, mapKey, explore, hovered, mapHighlighted, metadata*/ 25078 | dirty[1] & /*$$scope*/ 262144) {
     				scroller_changes.$$scope = { dirty, ctx };
     			}
 
@@ -26166,22 +26065,22 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_if_block$l.name,
     		type: "if",
-    		source: "(624:0) {#if geojson && data.district.indicators}",
+    		source: "(651:0) {#if geojson && data.district.indicators}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (640:14) <MapLayer                 id="lad-fill"                 idKey="code"                 colorKey={mapKey + '_color'}                 data={data.district.indicators}                 type="fill"                 select                 {selected}                 on:select={doSelect}                 clickIgnore={!explore}                 hover                 {hovered}                 on:hover={doHover}                 highlight                 highlighted={mapHighlighted}                 paint={{ 'fill-color': ['case', ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'], 'rgba(255, 255, 255, 0)'], 'fill-opacity': 0.7 }}>
+    // (667:14) <MapLayer                 id="lad-fill"                 idKey="code"                 colorKey={mapKey + '_color'}                 data={data.district.indicators}                 type="fill"                 select                 {selected}                 on:select={doSelect}                 clickIgnore={!explore}                 hover                 {hovered}                 on:hover={doHover}                 highlight                 highlighted={mapHighlighted}                 paint={{ 'fill-color': ['case', ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'], 'rgba(255, 255, 255, 0)'], 'fill-opacity': 0.7 }}>
     function create_default_slot_7(ctx) {
     	let maptooltip;
     	let current;
 
     	maptooltip = new MapTooltip({
     			props: {
-    				content: /*hovered*/ ctx[8]
-    				? `${/*metadata*/ ctx[1].district.lookup[/*hovered*/ ctx[8]].name}<br/><strong>${/*data*/ ctx[5].district.indicators.find(/*func_9*/ ctx[27])[/*mapKey*/ ctx[14]].toLocaleString()} ${units[/*mapKey*/ ctx[14]]}</strong>`
+    				content: /*hovered*/ ctx[7]
+    				? `${/*metadata*/ ctx[1].district.lookup[/*hovered*/ ctx[7]].name}<br/><strong>${/*data*/ ctx[4].district.indicators.find(/*func_9*/ ctx[27])[/*mapKey*/ ctx[13]].toLocaleString()} ${units[/*mapKey*/ ctx[13]]}</strong>`
     				: ''
     			},
     			$$inline: true
@@ -26198,8 +26097,8 @@ uniform `+P+" "+z+" u_"+k+`;
     		p: function update(ctx, dirty) {
     			const maptooltip_changes = {};
 
-    			if (dirty[0] & /*hovered, metadata, data, mapKey*/ 16674) maptooltip_changes.content = /*hovered*/ ctx[8]
-    			? `${/*metadata*/ ctx[1].district.lookup[/*hovered*/ ctx[8]].name}<br/><strong>${/*data*/ ctx[5].district.indicators.find(/*func_9*/ ctx[27])[/*mapKey*/ ctx[14]].toLocaleString()} ${units[/*mapKey*/ ctx[14]]}</strong>`
+    			if (dirty[0] & /*hovered, metadata, data, mapKey*/ 8338) maptooltip_changes.content = /*hovered*/ ctx[7]
+    			? `${/*metadata*/ ctx[1].district.lookup[/*hovered*/ ctx[7]].name}<br/><strong>${/*data*/ ctx[4].district.indicators.find(/*func_9*/ ctx[27])[/*mapKey*/ ctx[13]].toLocaleString()} ${units[/*mapKey*/ ctx[13]]}</strong>`
     			: '';
 
     			maptooltip.$set(maptooltip_changes);
@@ -26222,14 +26121,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(640:14) <MapLayer                 id=\\\"lad-fill\\\"                 idKey=\\\"code\\\"                 colorKey={mapKey + '_color'}                 data={data.district.indicators}                 type=\\\"fill\\\"                 select                 {selected}                 on:select={doSelect}                 clickIgnore={!explore}                 hover                 {hovered}                 on:hover={doHover}                 highlight                 highlighted={mapHighlighted}                 paint={{ 'fill-color': ['case', ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'], 'rgba(255, 255, 255, 0)'], 'fill-opacity': 0.7 }}>",
+    		source: "(667:14) <MapLayer                 id=\\\"lad-fill\\\"                 idKey=\\\"code\\\"                 colorKey={mapKey + '_color'}                 data={data.district.indicators}                 type=\\\"fill\\\"                 select                 {selected}                 on:select={doSelect}                 clickIgnore={!explore}                 hover                 {hovered}                 on:hover={doHover}                 highlight                 highlighted={mapHighlighted}                 paint={{ 'fill-color': ['case', ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'], 'rgba(255, 255, 255, 0)'], 'fill-opacity': 0.7 }}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (634:12) <MapSource               id="lad"               type="geojson"               data={geojson}               promoteId="AREACD"               maxzoom={13}>
+    // (661:12) <MapSource               id="lad"               type="geojson"               data={geojson}               promoteId="AREACD"               maxzoom={13}>
     function create_default_slot_6(ctx) {
     	let maplayer0;
     	let t;
@@ -26240,16 +26139,16 @@ uniform `+P+" "+z+" u_"+k+`;
     			props: {
     				id: "lad-fill",
     				idKey: "code",
-    				colorKey: /*mapKey*/ ctx[14] + '_color',
-    				data: /*data*/ ctx[5].district.indicators,
+    				colorKey: /*mapKey*/ ctx[13] + '_color',
+    				data: /*data*/ ctx[4].district.indicators,
     				type: "fill",
     				select: true,
     				selected: /*selected*/ ctx[2],
-    				clickIgnore: !/*explore*/ ctx[15],
+    				clickIgnore: !/*explore*/ ctx[14],
     				hover: true,
-    				hovered: /*hovered*/ ctx[8],
+    				hovered: /*hovered*/ ctx[7],
     				highlight: true,
-    				highlighted: /*mapHighlighted*/ ctx[9],
+    				highlighted: /*mapHighlighted*/ ctx[8],
     				paint: {
     					'fill-color': [
     						'case',
@@ -26303,14 +26202,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		},
     		p: function update(ctx, dirty) {
     			const maplayer0_changes = {};
-    			if (dirty[0] & /*mapKey*/ 16384) maplayer0_changes.colorKey = /*mapKey*/ ctx[14] + '_color';
-    			if (dirty[0] & /*data*/ 32) maplayer0_changes.data = /*data*/ ctx[5].district.indicators;
+    			if (dirty[0] & /*mapKey*/ 8192) maplayer0_changes.colorKey = /*mapKey*/ ctx[13] + '_color';
+    			if (dirty[0] & /*data*/ 16) maplayer0_changes.data = /*data*/ ctx[4].district.indicators;
     			if (dirty[0] & /*selected*/ 4) maplayer0_changes.selected = /*selected*/ ctx[2];
-    			if (dirty[0] & /*explore*/ 32768) maplayer0_changes.clickIgnore = !/*explore*/ ctx[15];
-    			if (dirty[0] & /*hovered*/ 256) maplayer0_changes.hovered = /*hovered*/ ctx[8];
-    			if (dirty[0] & /*mapHighlighted*/ 512) maplayer0_changes.highlighted = /*mapHighlighted*/ ctx[9];
+    			if (dirty[0] & /*explore*/ 16384) maplayer0_changes.clickIgnore = !/*explore*/ ctx[14];
+    			if (dirty[0] & /*hovered*/ 128) maplayer0_changes.hovered = /*hovered*/ ctx[7];
+    			if (dirty[0] & /*mapHighlighted*/ 256) maplayer0_changes.highlighted = /*mapHighlighted*/ ctx[8];
 
-    			if (dirty[0] & /*hovered, metadata, data, mapKey*/ 16674 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[0] & /*hovered, metadata, data, mapKey*/ 8338 | dirty[1] & /*$$scope*/ 262144) {
     				maplayer0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -26338,14 +26237,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(634:12) <MapSource               id=\\\"lad\\\"               type=\\\"geojson\\\"               data={geojson}               promoteId=\\\"AREACD\\\"               maxzoom={13}>",
+    		source: "(661:12) <MapSource               id=\\\"lad\\\"               type=\\\"geojson\\\"               data={geojson}               promoteId=\\\"AREACD\\\"               maxzoom={13}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (629:10) <Map             style={mapstyle}             bind:map             interactive={false}             location={{ bounds: mapbounds.uk }}>
+    // (656:10) <Map             style={mapstyle}             bind:map             interactive={false}             location={{ bounds: mapbounds.uk }}>
     function create_default_slot_5(ctx) {
     	let mapsource;
     	let current;
@@ -26354,7 +26253,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			props: {
     				id: "lad",
     				type: "geojson",
-    				data: /*geojson*/ ctx[6],
+    				data: /*geojson*/ ctx[5],
     				promoteId: "AREACD",
     				maxzoom: 13,
     				$$slots: { default: [create_default_slot_6] },
@@ -26373,9 +26272,9 @@ uniform `+P+" "+z+" u_"+k+`;
     		},
     		p: function update(ctx, dirty) {
     			const mapsource_changes = {};
-    			if (dirty[0] & /*geojson*/ 64) mapsource_changes.data = /*geojson*/ ctx[6];
+    			if (dirty[0] & /*geojson*/ 32) mapsource_changes.data = /*geojson*/ ctx[5];
 
-    			if (dirty[0] & /*mapKey, data, selected, explore, hovered, mapHighlighted, metadata*/ 49958 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[0] & /*mapKey, data, selected, explore, hovered, mapHighlighted, metadata*/ 24982 | dirty[1] & /*$$scope*/ 262144) {
     				mapsource_changes.$$scope = { dirty, ctx };
     			}
 
@@ -26399,14 +26298,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(629:10) <Map             style={mapstyle}             bind:map             interactive={false}             location={{ bounds: mapbounds.uk }}>",
+    		source: "(656:10) <Map             style={mapstyle}             bind:map             interactive={false}             location={{ bounds: mapbounds.uk }}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (626:4) 
+    // (653:4) 
     function create_background_slot(ctx) {
     	let div1;
     	let figure;
@@ -26427,8 +26326,8 @@ uniform `+P+" "+z+" u_"+k+`;
     		$$scope: { ctx }
     	};
 
-    	if (/*map*/ ctx[7] !== void 0) {
-    		map_1_props.map = /*map*/ ctx[7];
+    	if (/*map*/ ctx[6] !== void 0) {
+    		map_1_props.map = /*map*/ ctx[6];
     	}
 
     	map_1 = new Map$1({ props: map_1_props, $$inline: true });
@@ -26441,10 +26340,10 @@ uniform `+P+" "+z+" u_"+k+`;
     			div0 = element("div");
     			create_component(map_1.$$.fragment);
     			attr_dev(div0, "class", "col-full height-full");
-    			add_location(div0, file$s, 627, 8, 17207);
-    			add_location(figure, file$s, 626, 6, 17190);
+    			add_location(div0, file$s, 654, 8, 17770);
+    			add_location(figure, file$s, 653, 6, 17753);
     			attr_dev(div1, "slot", "background");
-    			add_location(div1, file$s, 625, 4, 17160);
+    			add_location(div1, file$s, 652, 4, 17723);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -26456,13 +26355,13 @@ uniform `+P+" "+z+" u_"+k+`;
     		p: function update(ctx, dirty) {
     			const map_1_changes = {};
 
-    			if (dirty[0] & /*geojson, mapKey, data, selected, explore, hovered, mapHighlighted, metadata*/ 50022 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[0] & /*geojson, mapKey, data, selected, explore, hovered, mapHighlighted, metadata*/ 25014 | dirty[1] & /*$$scope*/ 262144) {
     				map_1_changes.$$scope = { dirty, ctx };
     			}
 
-    			if (!updating_map && dirty[0] & /*map*/ 128) {
+    			if (!updating_map && dirty[0] & /*map*/ 64) {
     				updating_map = true;
-    				map_1_changes.map = /*map*/ ctx[7];
+    				map_1_changes.map = /*map*/ ctx[6];
     				add_flush_callback(() => updating_map = false);
     			}
 
@@ -26487,14 +26386,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_background_slot.name,
     		type: "slot",
-    		source: "(626:4) ",
+    		source: "(653:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (680:12) <Em color={colors.seq[0]}>
+    // (707:12) <Em color={colors.seq[0]}>
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -26514,14 +26413,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(680:12) <Em color={colors.seq[0]}>",
+    		source: "(707:12) <Em color={colors.seq[0]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (682:12) <Em color={colors.seq[4]}>
+    // (709:12) <Em color={colors.seq[4]}>
     function create_default_slot_3$3(ctx) {
     	let t;
 
@@ -26541,20 +26440,20 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_3$3.name,
     		type: "slot",
-    		source: "(682:12) <Em color={colors.seq[4]}>",
+    		source: "(709:12) <Em color={colors.seq[4]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (693:12) <Em color={colors.seq[0]}>
+    // (720:12) <Em color={colors.seq[0]}>
     function create_default_slot_2$3(ctx) {
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("youngest");
+    			t = text("least usage");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -26568,20 +26467,20 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(693:12) <Em color={colors.seq[0]}>",
+    		source: "(720:12) <Em color={colors.seq[0]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (695:12) <Em color={colors.seq[4]}>
+    // (722:12) <Em color={colors.seq[4]}>
     function create_default_slot_1$3(ctx) {
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("oldest");
+    			t = text("most usage");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -26595,16 +26494,16 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(695:12) <Em color={colors.seq[4]}>",
+    		source: "(722:12) <Em color={colors.seq[4]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (706:14) <Em color={district.age_med_color}>
+    // (733:14) <Em color={district.age_med_color}>
     function create_default_slot$3(ctx) {
-    	let t_value = /*district*/ ctx[39].name + "";
+    	let t_value = /*district*/ ctx[42].name + "";
     	let t;
 
     	const block = {
@@ -26615,7 +26514,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*data*/ 32 && t_value !== (t_value = /*district*/ ctx[39].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*data*/ 16 && t_value !== (t_value = /*district*/ ctx[42].name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t);
@@ -26626,27 +26525,27 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(706:14) <Em color={district.age_med_color}>",
+    		source: "(733:14) <Em color={district.age_med_color}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (703:10) {#each [[...data.district.indicators].sort((a, b) => b.age_med - a.age_med)[0]] as district}
+    // (730:10) {#each [[...data.district.indicators].sort((a, b) => b.age_med - a.age_med)[0]] as district}
     function create_each_block_1$4(ctx) {
     	let p;
     	let t0;
     	let em;
     	let t1;
-    	let t2_value = /*district*/ ctx[39].age_med + "";
+    	let t2_value = /*district*/ ctx[42].age_med + "";
     	let t2;
     	let t3;
     	let current;
 
     	em = new Em({
     			props: {
-    				color: /*district*/ ctx[39].age_med_color,
+    				color: /*district*/ ctx[42].age_med_color,
     				$$slots: { default: [create_default_slot$3] },
     				$$scope: { ctx }
     			},
@@ -26658,10 +26557,10 @@ uniform `+P+" "+z+" u_"+k+`;
     			p = element("p");
     			t0 = text("The map is now zoomed on\n              ");
     			create_component(em.$$.fragment);
-    			t1 = text("\n              , the district with the oldest median age, ");
+    			t1 = text("\n              , the district with the most  usage of e-naira, with ");
     			t2 = text(t2_value);
-    			t3 = text("\n              years.\n            ");
-    			add_location(p, file$s, 703, 12, 20087);
+    			t3 = text("\n               in 2years.\n            ");
+    			add_location(p, file$s, 730, 12, 20688);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -26674,14 +26573,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		},
     		p: function update(ctx, dirty) {
     			const em_changes = {};
-    			if (dirty[0] & /*data*/ 32) em_changes.color = /*district*/ ctx[39].age_med_color;
+    			if (dirty[0] & /*data*/ 16) em_changes.color = /*district*/ ctx[42].age_med_color;
 
-    			if (dirty[0] & /*data*/ 32 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[0] & /*data*/ 16 | dirty[1] & /*$$scope*/ 262144) {
     				em_changes.$$scope = { dirty, ctx };
     			}
 
     			em.$set(em_changes);
-    			if ((!current || dirty[0] & /*data*/ 32) && t2_value !== (t2_value = /*district*/ ctx[39].age_med + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty[0] & /*data*/ 16) && t2_value !== (t2_value = /*district*/ ctx[42].age_med + "")) set_data_dev(t2, t2_value);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -26702,14 +26601,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_each_block_1$4.name,
     		type: "each",
-    		source: "(703:10) {#each [[...data.district.indicators].sort((a, b) => b.age_med - a.age_med)[0]] as district}",
+    		source: "(730:10) {#each [[...data.district.indicators].sort((a, b) => b.age_med - a.age_med)[0]] as district}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (720:10) {#if geojson}
+    // (747:10) {#if geojson}
     function create_if_block_1$a(ctx) {
     	let p;
     	let select;
@@ -26717,7 +26616,7 @@ uniform `+P+" "+z+" u_"+k+`;
     	let option_value_value;
     	let mounted;
     	let dispose;
-    	let each_value = /*geojson*/ ctx[6].features;
+    	let each_value = /*geojson*/ ctx[5].features;
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -26738,11 +26637,11 @@ uniform `+P+" "+z+" u_"+k+`;
 
     			option.__value = option_value_value = null;
     			option.value = option.__value;
-    			add_location(option, file$s, 723, 16, 20792);
+    			add_location(option, file$s, 750, 16, 21398);
     			attr_dev(select, "class", "svelte-xshzp7");
     			if (/*selected*/ ctx[2] === void 0) add_render_callback(() => /*select_change_handler_1*/ ctx[25].call(select));
-    			add_location(select, file$s, 722, 14, 20709);
-    			add_location(p, file$s, 720, 12, 20637);
+    			add_location(select, file$s, 749, 14, 21315);
+    			add_location(p, file$s, 747, 12, 21243);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -26765,8 +26664,8 @@ uniform `+P+" "+z+" u_"+k+`;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*geojson*/ 64) {
-    				each_value = /*geojson*/ ctx[6].features;
+    			if (dirty[0] & /*geojson*/ 32) {
+    				each_value = /*geojson*/ ctx[5].features;
     				validate_each_argument(each_value);
     				let i;
 
@@ -26789,7 +26688,7 @@ uniform `+P+" "+z+" u_"+k+`;
     				each_blocks.length = each_value.length;
     			}
 
-    			if (dirty[0] & /*selected, geojson*/ 68) {
+    			if (dirty[0] & /*selected, geojson*/ 36) {
     				select_option(select, /*selected*/ ctx[2]);
     			}
     		},
@@ -26805,17 +26704,17 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_if_block_1$a.name,
     		type: "if",
-    		source: "(720:10) {#if geojson}",
+    		source: "(747:10) {#if geojson}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (725:16) {#each geojson.features as place}
+    // (752:16) {#each geojson.features as place}
     function create_each_block$9(ctx) {
     	let option;
-    	let t0_value = /*place*/ ctx[36].properties.AREANM + "";
+    	let t0_value = /*place*/ ctx[39].properties.AREANM + "";
     	let t0;
     	let t1;
     	let option_value_value;
@@ -26825,9 +26724,9 @@ uniform `+P+" "+z+" u_"+k+`;
     			option = element("option");
     			t0 = text(t0_value);
     			t1 = space();
-    			option.__value = option_value_value = /*place*/ ctx[36].properties.AREACD;
+    			option.__value = option_value_value = /*place*/ ctx[39].properties.AREACD;
     			option.value = option.__value;
-    			add_location(option, file$s, 725, 18, 20901);
+    			add_location(option, file$s, 752, 18, 21507);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -26835,9 +26734,9 @@ uniform `+P+" "+z+" u_"+k+`;
     			append_dev(option, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*geojson*/ 64 && t0_value !== (t0_value = /*place*/ ctx[36].properties.AREANM + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*geojson*/ 32 && t0_value !== (t0_value = /*place*/ ctx[39].properties.AREANM + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*geojson*/ 64 && option_value_value !== (option_value_value = /*place*/ ctx[36].properties.AREACD)) {
+    			if (dirty[0] & /*geojson*/ 32 && option_value_value !== (option_value_value = /*place*/ ctx[39].properties.AREACD)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -26851,14 +26750,14 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_each_block$9.name,
     		type: "each",
-    		source: "(725:16) {#each geojson.features as place}",
+    		source: "(752:16) {#each geojson.features as place}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (673:4) 
+    // (700:4) 
     function create_foreground_slot(ctx) {
     	let div4;
     	let section0;
@@ -26930,7 +26829,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			$$inline: true
     		});
 
-    	let each_value_1 = [[.../*data*/ ctx[5].district.indicators].sort(func_8)[0]];
+    	let each_value_1 = [[.../*data*/ ctx[4].district.indicators].sort(func_8)[0]];
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -26942,7 +26841,7 @@ uniform `+P+" "+z+" u_"+k+`;
     		each_blocks[i] = null;
     	});
 
-    	let if_block = /*geojson*/ ctx[6] && create_if_block_1$a(ctx);
+    	let if_block = /*geojson*/ ctx[5] && create_if_block_1$a(ctx);
 
     	const block = {
     		c: function create() {
@@ -26950,21 +26849,21 @@ uniform `+P+" "+z+" u_"+k+`;
     			section0 = element("section");
     			div0 = element("div");
     			p0 = element("p");
-    			t0 = text("This map shows\n            ");
+    			t0 = text("This map display\n            ");
     			strong0 = element("strong");
-    			strong0.textContent = "population density";
-    			t2 = text("\n            by district. Districts are coloured from\n            ");
+    			strong0.textContent = "e-naira circulation density";
+    			t2 = text("\n            by LGAs. LGAs are coloured from\n            ");
     			create_component(em0.$$.fragment);
     			t3 = text("\n            to\n            ");
     			create_component(em1.$$.fragment);
-    			t4 = text("\n            . You can hover to see the district name and density.");
+    			t4 = text("\n            . You can hover to see the LGA name and circulation density.");
     			t5 = space();
     			section1 = element("section");
     			div1 = element("div");
     			p1 = element("p");
-    			t6 = text("The map now shows\n            ");
+    			t6 = text("The map then display\n            ");
     			strong1 = element("strong");
-    			strong1.textContent = "median age";
+    			strong1.textContent = "the average usage of e-naira";
     			t8 = text("\n            , from\n            ");
     			create_component(em2.$$.fragment);
     			t9 = text("\n            to\n            ");
@@ -26982,36 +26881,36 @@ uniform `+P+" "+z+" u_"+k+`;
     			section3 = element("section");
     			div3 = element("div");
     			h3 = element("h3");
-    			h3.textContent = "Select a district";
+    			h3.textContent = "Select a LGA";
     			t14 = space();
     			p2 = element("p");
-    			p2.textContent = "Use the selection box below or click on the map to select and zoom\n            to a district.";
+    			p2.textContent = "Use the selection box below or click on the map to select and zoom\n            to a LGA.";
     			t16 = space();
     			if (if_block) if_block.c();
-    			add_location(strong0, file$s, 677, 12, 19146);
-    			add_location(p0, file$s, 675, 10, 19103);
+    			add_location(strong0, file$s, 704, 12, 19711);
+    			add_location(p0, file$s, 702, 10, 19666);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file$s, 674, 8, 19068);
+    			add_location(div0, file$s, 701, 8, 19631);
     			attr_dev(section0, "data-id", "map01");
-    			add_location(section0, file$s, 673, 6, 19034);
-    			add_location(strong1, file$s, 690, 12, 19593);
-    			add_location(p1, file$s, 688, 10, 19547);
+    			add_location(section0, file$s, 700, 6, 19597);
+    			add_location(strong1, file$s, 717, 12, 20168);
+    			add_location(p1, file$s, 715, 10, 20119);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file$s, 687, 8, 19512);
+    			add_location(div1, file$s, 714, 8, 20084);
     			attr_dev(section1, "data-id", "map02");
-    			add_location(section1, file$s, 686, 6, 19478);
+    			add_location(section1, file$s, 713, 6, 20050);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file$s, 700, 8, 19858);
+    			add_location(div2, file$s, 727, 8, 20459);
     			attr_dev(section2, "data-id", "map03");
-    			add_location(section2, file$s, 699, 6, 19824);
-    			add_location(h3, file$s, 714, 10, 20439);
-    			add_location(p2, file$s, 715, 10, 20476);
+    			add_location(section2, file$s, 726, 6, 20425);
+    			add_location(h3, file$s, 741, 10, 21055);
+    			add_location(p2, file$s, 742, 10, 21087);
     			attr_dev(div3, "class", "col-medium");
-    			add_location(div3, file$s, 713, 8, 20404);
+    			add_location(div3, file$s, 740, 8, 21020);
     			attr_dev(section3, "data-id", "map04");
-    			add_location(section3, file$s, 712, 6, 20370);
+    			add_location(section3, file$s, 739, 6, 20986);
     			attr_dev(div4, "slot", "foreground");
-    			add_location(div4, file$s, 672, 4, 19004);
+    			add_location(div4, file$s, 699, 4, 19567);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -27057,35 +26956,35 @@ uniform `+P+" "+z+" u_"+k+`;
     		p: function update(ctx, dirty) {
     			const em0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				em0_changes.$$scope = { dirty, ctx };
     			}
 
     			em0.$set(em0_changes);
     			const em1_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				em1_changes.$$scope = { dirty, ctx };
     			}
 
     			em1.$set(em1_changes);
     			const em2_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				em2_changes.$$scope = { dirty, ctx };
     			}
 
     			em2.$set(em2_changes);
     			const em3_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				em3_changes.$$scope = { dirty, ctx };
     			}
 
     			em3.$set(em3_changes);
 
-    			if (dirty[0] & /*data*/ 32) {
-    				each_value_1 = [[.../*data*/ ctx[5].district.indicators].sort(func_8)[0]];
+    			if (dirty[0] & /*data*/ 16) {
+    				each_value_1 = [[.../*data*/ ctx[4].district.indicators].sort(func_8)[0]];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -27112,7 +27011,7 @@ uniform `+P+" "+z+" u_"+k+`;
     				check_outros();
     			}
 
-    			if (/*geojson*/ ctx[6]) {
+    			if (/*geojson*/ ctx[5]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -27166,7 +27065,7 @@ uniform `+P+" "+z+" u_"+k+`;
     		block,
     		id: create_foreground_slot.name,
     		type: "slot",
-    		source: "(673:4) ",
+    		source: "(700:4) ",
     		ctx
     	});
 
@@ -27220,7 +27119,7 @@ uniform `+P+" "+z+" u_"+k+`;
 
     	header = new Header({
     			props: {
-    				bgcolor: "#000fff",
+    				bgcolor: "#0FFFF",
     				bgfixed: true,
     				theme: "dark",
     				center: false,
@@ -27249,7 +27148,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			$$inline: true
     		});
 
-    	let if_block0 = /*data*/ ctx[5].region.indicators && create_if_block_6$2(ctx);
+    	let if_block0 = /*data*/ ctx[4].region.indicators && create_if_block_6$2(ctx);
     	divider1 = new Divider({ $$inline: true });
 
     	section2 = new Section({
@@ -27260,7 +27159,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			$$inline: true
     		});
 
-    	let if_block1 = /*data*/ ctx[5].region.timeseries && /*data*/ ctx[5].region.indicators && create_if_block_5$3(ctx);
+    	let if_block1 = /*data*/ ctx[4].region.timeseries && /*data*/ ctx[4].region.indicators && create_if_block_5$3(ctx);
     	divider2 = new Divider({ $$inline: true });
 
     	section3 = new Section({
@@ -27305,7 +27204,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			props: {
     				col: "full",
     				height: 600,
-    				caption: "This is an optional caption for the above chart or media. It can\n  contain HTML code and wrap onto multiple lines.",
+    				caption: "Line distribution of e-naira ",
     				$$slots: { default: [create_default_slot_9] },
     				$$scope: { ctx }
     			},
@@ -27322,7 +27221,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			$$inline: true
     		});
 
-    	let if_block2 = /*geojson*/ ctx[6] && /*data*/ ctx[5].district.indicators && create_if_block$l(ctx);
+    	let if_block2 = /*geojson*/ ctx[5] && /*data*/ ctx[4].district.indicators && create_if_block$l(ctx);
     	divider5 = new Divider({ $$inline: true });
     	onsfooter = new ONSFooter({ $$inline: true });
 
@@ -27416,31 +27315,31 @@ uniform `+P+" "+z+" u_"+k+`;
     		p: function update(ctx, dirty) {
     			const header_changes = {};
 
-    			if (dirty[0] & /*animation*/ 16 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				header_changes.$$scope = { dirty, ctx };
     			}
 
     			header.$set(header_changes);
     			const section0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				section0_changes.$$scope = { dirty, ctx };
     			}
 
     			section0.$set(section0_changes);
     			const section1_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				section1_changes.$$scope = { dirty, ctx };
     			}
 
     			section1.$set(section1_changes);
 
-    			if (/*data*/ ctx[5].region.indicators) {
+    			if (/*data*/ ctx[4].region.indicators) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
 
-    					if (dirty[0] & /*data*/ 32) {
+    					if (dirty[0] & /*data*/ 16) {
     						transition_in(if_block0, 1);
     					}
     				} else {
@@ -27461,17 +27360,17 @@ uniform `+P+" "+z+" u_"+k+`;
 
     			const section2_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				section2_changes.$$scope = { dirty, ctx };
     			}
 
     			section2.$set(section2_changes);
 
-    			if (/*data*/ ctx[5].region.timeseries && /*data*/ ctx[5].region.indicators) {
+    			if (/*data*/ ctx[4].region.timeseries && /*data*/ ctx[4].region.indicators) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty[0] & /*data*/ 32) {
+    					if (dirty[0] & /*data*/ 16) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -27492,14 +27391,14 @@ uniform `+P+" "+z+" u_"+k+`;
 
     			const section3_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				section3_changes.$$scope = { dirty, ctx };
     			}
 
     			section3.$set(section3_changes);
     			const scroller_changes = {};
 
-    			if (dirty[0] & /*selected, geojson, data, metadata, explore, xKey, yKey, zKey, rKey, hovered, chartHighlighted, animation*/ 114038 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[0] & /*selected, geojson, data, metadata, explore, xKey, yKey, zKey, rKey, hovered, chartHighlighted*/ 57014 | dirty[1] & /*$$scope*/ 262144) {
     				scroller_changes.$$scope = { dirty, ctx };
     			}
 
@@ -27512,31 +27411,31 @@ uniform `+P+" "+z+" u_"+k+`;
     			scroller.$set(scroller_changes);
     			const section4_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				section4_changes.$$scope = { dirty, ctx };
     			}
 
     			section4.$set(section4_changes);
     			const media_changes = {};
 
-    			if (dirty[0] & /*data, selected, hovered, chartHighlighted*/ 65828 | dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[0] & /*data, selected, hovered, chartHighlighted*/ 32916 | dirty[1] & /*$$scope*/ 262144) {
     				media_changes.$$scope = { dirty, ctx };
     			}
 
     			media.$set(media_changes);
     			const section5_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 32768) {
+    			if (dirty[1] & /*$$scope*/ 262144) {
     				section5_changes.$$scope = { dirty, ctx };
     			}
 
     			section5.$set(section5_changes);
 
-    			if (/*geojson*/ ctx[6] && /*data*/ ctx[5].district.indicators) {
+    			if (/*geojson*/ ctx[5] && /*data*/ ctx[4].district.indicators) {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
 
-    					if (dirty[0] & /*geojson, data*/ 96) {
+    					if (dirty[0] & /*geojson, data*/ 48) {
     						transition_in(if_block2, 1);
     					}
     				} else {
@@ -27723,7 +27622,7 @@ uniform `+P+" "+z+" u_"+k+`;
     	}
 
     	function doHover(e) {
-    		$$invalidate(8, hovered = e.detail.id);
+    		$$invalidate(7, hovered = e.detail.id);
     	}
 
     	// Functions for map component
@@ -27749,68 +27648,88 @@ uniform `+P+" "+z+" u_"+k+`;
     				// Action for <section/> with data-id="map01"
     				fitBounds(mapbounds.uk);
 
-    				$$invalidate(14, mapKey = 'density');
-    				$$invalidate(9, mapHighlighted = []);
-    				$$invalidate(15, explore = false);
+    				$$invalidate(13, mapKey = 'density');
+    				$$invalidate(8, mapHighlighted = []);
+    				$$invalidate(14, explore = false);
     			},
     			map02: () => {
     				fitBounds(mapbounds.uk);
-    				$$invalidate(14, mapKey = 'age_med');
-    				$$invalidate(9, mapHighlighted = []);
-    				$$invalidate(15, explore = false);
+    				$$invalidate(13, mapKey = 'age_med');
+    				$$invalidate(8, mapHighlighted = []);
+    				$$invalidate(14, explore = false);
     			},
     			map03: () => {
     				let hl = [...data.district.indicators].sort((a, b) => b.age_med - a.age_med)[0];
     				fitById(hl.code);
-    				$$invalidate(14, mapKey = 'age_med');
-    				$$invalidate(9, mapHighlighted = [hl.code]);
-    				$$invalidate(15, explore = false);
+    				$$invalidate(13, mapKey = 'age_med');
+    				$$invalidate(8, mapHighlighted = [hl.code]);
+    				$$invalidate(14, explore = false);
     			},
     			map04: () => {
     				fitBounds(mapbounds.uk);
-    				$$invalidate(14, mapKey = 'age_med');
-    				$$invalidate(9, mapHighlighted = []);
-    				$$invalidate(15, explore = true);
+    				$$invalidate(13, mapKey = 'age_med');
+    				$$invalidate(8, mapHighlighted = []);
+    				$$invalidate(14, explore = true);
     			}
     		},
     		chart: {
     			chart01: () => {
-    				$$invalidate(10, xKey = 'area');
-    				$$invalidate(11, yKey = null);
-    				$$invalidate(12, zKey = null);
-    				$$invalidate(13, rKey = null);
-    				$$invalidate(15, explore = false);
+    				$$invalidate(9, xKey = 'area');
+    				$$invalidate(10, yKey = null);
+    				$$invalidate(11, zKey = null);
+    				$$invalidate(12, rKey = null);
+    				$$invalidate(14, explore = true);
     			},
     			chart02: () => {
-    				$$invalidate(10, xKey = 'area');
-    				$$invalidate(11, yKey = null);
-    				$$invalidate(12, zKey = null);
-    				$$invalidate(13, rKey = 'pop');
-    				$$invalidate(15, explore = false);
+    				$$invalidate(9, xKey = 'area');
+    				$$invalidate(10, yKey = null);
+    				$$invalidate(11, zKey = null);
+    				$$invalidate(12, rKey = 'pop');
+    				$$invalidate(14, explore = true);
     			},
     			chart03: () => {
-    				$$invalidate(10, xKey = 'area');
-    				$$invalidate(11, yKey = 'density');
-    				$$invalidate(12, zKey = null);
-    				$$invalidate(13, rKey = 'pop');
-    				$$invalidate(15, explore = false);
+    				$$invalidate(9, xKey = 'area');
+    				$$invalidate(10, yKey = 'density');
+    				$$invalidate(11, zKey = null);
+    				$$invalidate(12, rKey = 'pop');
+    				$$invalidate(14, explore = true);
     			},
     			chart04: () => {
-    				$$invalidate(10, xKey = 'area');
-    				$$invalidate(11, yKey = 'density');
-    				$$invalidate(12, zKey = 'parent_name');
-    				$$invalidate(13, rKey = 'pop');
-    				$$invalidate(15, explore = false);
+    				$$invalidate(9, xKey = 'area');
+    				$$invalidate(10, yKey = 'density');
+    				$$invalidate(11, zKey = 'parent_name');
+    				$$invalidate(12, rKey = 'pop');
+    				$$invalidate(14, explore = false);
     			},
     			chart05: () => {
-    				$$invalidate(10, xKey = 'area');
-    				$$invalidate(11, yKey = 'density');
-    				$$invalidate(12, zKey = null);
-    				$$invalidate(13, rKey = 'pop');
-    				$$invalidate(15, explore = true);
+    				$$invalidate(9, xKey = 'area');
+    				$$invalidate(10, yKey = 'density');
+    				$$invalidate(11, zKey = null);
+    				$$invalidate(12, rKey = 'pop');
+    				$$invalidate(14, explore = true);
     			}
     		}
     	};
+
+    	const date = new Date();
+
+    	const months = [
+    		'January',
+    		'February',
+    		'March',
+    		'April',
+    		'May',
+    		'June',
+    		'July',
+    		'August',
+    		'September',
+    		'October',
+    		'November',
+    		'December'
+    	];
+
+    	const monthName = months[date.getMonth()];
+    	const currentDate = `${date.getDate()} ${monthName} ${date.getFullYear()}`;
 
     	// Code to run Scroller actions when new caption IDs come into view
     	function runActions(codes = []) {
@@ -27860,7 +27779,7 @@ uniform `+P+" "+z+" u_"+k+`;
     				});
     			}
 
-    			$$invalidate(5, data[geo].indicators = indicators, data);
+    			$$invalidate(4, data[geo].indicators = indicators, data);
 
     			let years = [
     				2001,
@@ -27898,13 +27817,13 @@ uniform `+P+" "+z+" u_"+k+`;
     				});
     			});
 
-    			$$invalidate(5, data[geo].timeseries = timeseries, data);
+    			$$invalidate(4, data[geo].timeseries = timeseries, data);
     		});
     	});
 
     	getTopo(topojson, 'geog').then(geo => {
     		geo.features.sort((a, b) => a.properties.AREANM.localeCompare(b.properties.AREANM));
-    		$$invalidate(6, geojson = geo);
+    		$$invalidate(5, geojson = geo);
     	});
 
     	const writable_props = [];
@@ -27913,15 +27832,10 @@ uniform `+P+" "+z+" u_"+k+`;
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$3.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	function toggle_checked_binding(value) {
-    		animation = value;
-    		$$invalidate(4, animation);
-    	}
-
     	function select_change_handler() {
     		selected = select_value(this);
     		$$invalidate(2, selected);
-    		$$invalidate(6, geojson);
+    		$$invalidate(5, geojson);
     	}
 
     	const func_4 = d => ({
@@ -27939,7 +27853,7 @@ uniform `+P+" "+z+" u_"+k+`;
     	function select_change_handler_1() {
     		selected = select_value(this);
     		$$invalidate(2, selected);
-    		$$invalidate(6, geojson);
+    		$$invalidate(5, geojson);
     	}
 
     	const change_handler = () => fitById(selected);
@@ -27947,7 +27861,7 @@ uniform `+P+" "+z+" u_"+k+`;
 
     	function map_1_map_binding(value) {
     		map = value;
-    		$$invalidate(7, map);
+    		$$invalidate(6, map);
     	}
 
     	function scroller_id_binding_1(value) {
@@ -28015,6 +27929,10 @@ uniform `+P+" "+z+" u_"+k+`;
     		fitBounds,
     		fitById,
     		actions,
+    		date,
+    		months,
+    		monthName,
+    		currentDate,
     		runActions,
     		region,
     		chartHighlighted
@@ -28022,24 +27940,24 @@ uniform `+P+" "+z+" u_"+k+`;
 
     	$$self.$inject_state = $$props => {
     		if ('theme' in $$props) theme = $$props.theme;
-    		if ('animation' in $$props) $$invalidate(4, animation = $$props.animation);
+    		if ('animation' in $$props) $$invalidate(16, animation = $$props.animation);
     		if ('id' in $$props) $$invalidate(0, id = $$props.id);
     		if ('idPrev' in $$props) idPrev = $$props.idPrev;
-    		if ('data' in $$props) $$invalidate(5, data = $$props.data);
+    		if ('data' in $$props) $$invalidate(4, data = $$props.data);
     		if ('metadata' in $$props) $$invalidate(1, metadata = $$props.metadata);
-    		if ('geojson' in $$props) $$invalidate(6, geojson = $$props.geojson);
-    		if ('map' in $$props) $$invalidate(7, map = $$props.map);
-    		if ('hovered' in $$props) $$invalidate(8, hovered = $$props.hovered);
+    		if ('geojson' in $$props) $$invalidate(5, geojson = $$props.geojson);
+    		if ('map' in $$props) $$invalidate(6, map = $$props.map);
+    		if ('hovered' in $$props) $$invalidate(7, hovered = $$props.hovered);
     		if ('selected' in $$props) $$invalidate(2, selected = $$props.selected);
-    		if ('mapHighlighted' in $$props) $$invalidate(9, mapHighlighted = $$props.mapHighlighted);
-    		if ('xKey' in $$props) $$invalidate(10, xKey = $$props.xKey);
-    		if ('yKey' in $$props) $$invalidate(11, yKey = $$props.yKey);
-    		if ('zKey' in $$props) $$invalidate(12, zKey = $$props.zKey);
-    		if ('rKey' in $$props) $$invalidate(13, rKey = $$props.rKey);
-    		if ('mapKey' in $$props) $$invalidate(14, mapKey = $$props.mapKey);
-    		if ('explore' in $$props) $$invalidate(15, explore = $$props.explore);
+    		if ('mapHighlighted' in $$props) $$invalidate(8, mapHighlighted = $$props.mapHighlighted);
+    		if ('xKey' in $$props) $$invalidate(9, xKey = $$props.xKey);
+    		if ('yKey' in $$props) $$invalidate(10, yKey = $$props.yKey);
+    		if ('zKey' in $$props) $$invalidate(11, zKey = $$props.zKey);
+    		if ('rKey' in $$props) $$invalidate(12, rKey = $$props.rKey);
+    		if ('mapKey' in $$props) $$invalidate(13, mapKey = $$props.mapKey);
+    		if ('explore' in $$props) $$invalidate(14, explore = $$props.explore);
     		if ('region' in $$props) $$invalidate(3, region = $$props.region);
-    		if ('chartHighlighted' in $$props) $$invalidate(16, chartHighlighted = $$props.chartHighlighted);
+    		if ('chartHighlighted' in $$props) $$invalidate(15, chartHighlighted = $$props.chartHighlighted);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -28054,7 +27972,7 @@ uniform `+P+" "+z+" u_"+k+`;
     		}
 
     		if ($$self.$$.dirty[0] & /*metadata, region*/ 10) {
-    			 $$invalidate(16, chartHighlighted = metadata.district.array && region
+    			 $$invalidate(15, chartHighlighted = metadata.district.array && region
     			? metadata.district.array.filter(d => d.parent == region).map(d => d.code)
     			: []); // Array of district codes in 'region'
     		}
@@ -28069,7 +27987,6 @@ uniform `+P+" "+z+" u_"+k+`;
     		metadata,
     		selected,
     		region,
-    		animation,
     		data,
     		geojson,
     		map,
@@ -28082,11 +27999,12 @@ uniform `+P+" "+z+" u_"+k+`;
     		mapKey,
     		explore,
     		chartHighlighted,
+    		animation,
     		mapbounds,
     		doSelect,
     		doHover,
     		fitById,
-    		toggle_checked_binding,
+    		currentDate,
     		select_change_handler,
     		func_4,
     		scroller_id_binding,
