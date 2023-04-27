@@ -18,7 +18,7 @@
 <style>
 	.arrow {
 		width: 48px;
-		height: 48px;
+		height: 28px;
 	}
 	.left {
 		margin-right: 10px;

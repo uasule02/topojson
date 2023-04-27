@@ -335,18 +335,18 @@ const currentDate = `${date.getDate()} ${monthName} ${date.getFullYear()}`;
   center={false}
   short={true}>
   
-  <h1 style="margin-top: 5px; color: green">E-NAIRA Statistics</h1>
+  <h1 style="margin-top: 5px; color: green">E-NAIRA: The Journey</h1>
   <p class="text-big" style="margin-top: 5px; color: green">
     This is a short text description of e-naira usage across Nigeria.
   </p>
-  <p style="margin-top: 20px; color: green ">{currentDate}</p>
+  <p style="margin-top: 10px; color: green ">{currentDate}</p>
   <!-- <p>
     <Toggle
       label="Animation {animation ? 'on' : 'off'}"
       mono={true}
       bind:checked={animation} />
   </p>
-  <div style="margin-top: 40px;">
+  <div style="margin-top: 0px;">
     <Arrow color="white" {animation}>Scroll to begin</Arrow>
   </div> -->
 </Header> 

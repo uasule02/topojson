@@ -24,11 +24,11 @@
 
 <style>
   .short {
-    min-height: 85vh;
+    min-height: 35vh;
   }
   .v-padded {
     box-sizing: border-box;
-    padding: 30px 0;
+    padding: 10px 0;
   }
 </style>
 

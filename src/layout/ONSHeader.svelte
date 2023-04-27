@@ -29,7 +29,7 @@
 		box-sizing: border-box;
 		position: relative;
 		height: 66px;
-		margin-bottom: -26px;
+		margin-bottom: -16px;
 		border-bottom: 1px solid #777;
 		z-index: 1;
 	}
