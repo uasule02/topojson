@@ -1043,7 +1043,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "./img/enaira-logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "E-naira Statistics");
-    			attr_dev(img, "class", "svelte-r7h8ys");
+    			attr_dev(img, "class", "svelte-lcj3ev");
     			add_location(img, file, 18, 4, 602);
     		},
     		m: function mount(target, anchor) {
@@ -1075,7 +1075,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "./img/enaira-logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "E-naira Statistics");
-    			attr_dev(img, "class", "svelte-r7h8ys");
+    			attr_dev(img, "class", "svelte-lcj3ev");
     			add_location(img, file, 16, 4, 527);
     		},
     		m: function mount(target, anchor) {
@@ -1107,7 +1107,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "./img/enaira-logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "E-naira Statistics");
-    			attr_dev(img, "class", "svelte-r7h8ys");
+    			attr_dev(img, "class", "svelte-lcj3ev");
     			add_location(img, file, 14, 4, 434);
     		},
     		m: function mount(target, anchor) {
@@ -1152,10 +1152,10 @@ var app = (function () {
     			a = element("a");
     			picture = element("picture");
     			if_block.c();
-    			attr_dev(picture, "class", "svelte-r7h8ys");
+    			attr_dev(picture, "class", "svelte-lcj3ev");
     			add_location(picture, file, 12, 3, 394);
     			attr_dev(a, "href", "#");
-    			attr_dev(a, "class", "svelte-r7h8ys");
+    			attr_dev(a, "class", "svelte-lcj3ev");
     			add_location(a, file, 11, 2, 378);
     			attr_dev(div, "class", "col-wide middle");
     			toggle_class(div, "center", /*center*/ ctx[2]);
@@ -1165,7 +1165,7 @@ var app = (function () {
     			? 'background-color: ' + themes[/*theme*/ ctx[0]]['background'] + ';'
     			: ''));
 
-    			attr_dev(nav, "class", "svelte-r7h8ys");
+    			attr_dev(nav, "class", "svelte-lcj3ev");
     			add_location(nav, file, 9, 0, 196);
     		},
     		l: function claim(nodes) {
@@ -1600,7 +1600,7 @@ var app = (function () {
     			if (default_slot) default_slot.c();
     			toggle_class(div0, "center", /*center*/ ctx[2]);
     			add_location(div0, file$2, 36, 2, 865);
-    			attr_dev(div1, "class", "v-padded col-wide middle svelte-12vgz0i");
+    			attr_dev(div1, "class", "v-padded col-wide middle svelte-1kty2qr");
     			set_style(div1, "position", "relative");
     			toggle_class(div1, "short", /*short*/ ctx[3]);
     			toggle_class(div1, "height-full", !/*short*/ ctx[3]);
@@ -1610,7 +1610,7 @@ var app = (function () {
     			? /*bgcolor*/ ctx[1]
     			: themes[/*theme*/ ctx[0]]['background']) + "; " + /*style*/ ctx[4]);
 
-    			attr_dev(header, "class", "svelte-12vgz0i");
+    			attr_dev(header, "class", "svelte-1kty2qr");
     			toggle_class(header, "short", /*short*/ ctx[3]);
     			add_location(header, file$2, 34, 0, 619);
     		},
@@ -3428,7 +3428,7 @@ var app = (function () {
     			hr_1 = element("hr");
     			set_style(hr_1, "color", themes[/*theme*/ ctx[0]]['muted']);
     			set_style(hr_1, "border", "none");
-    			attr_dev(hr_1, "class", "svelte-1l2to1w");
+    			attr_dev(hr_1, "class", "svelte-1riu45a");
     			add_location(hr_1, file$7, 13, 4, 369);
     		},
     		m: function mount(target, anchor) {
@@ -3463,7 +3463,7 @@ var app = (function () {
     		c: function create() {
     			hr_1 = element("hr");
     			set_style(hr_1, "color", themes[/*theme*/ ctx[0]]['muted']);
-    			attr_dev(hr_1, "class", "svelte-1l2to1w");
+    			attr_dev(hr_1, "class", "svelte-1riu45a");
     			add_location(hr_1, file$7, 11, 4, 307);
     		},
     		m: function mount(target, anchor) {
@@ -3819,7 +3819,7 @@ var app = (function () {
     			img = element("img");
     			if (default_slot) default_slot.c();
     			if (!src_url_equal(img.src, img_src_value = "./img/scroll-down-" + /*color*/ ctx[0] + ".svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "arrow left svelte-1prdo3z");
+    			attr_dev(img, "class", "arrow left svelte-1bqd1ct");
     			attr_dev(img, "alt", "");
     			attr_dev(img, "aria-hidden", "true");
     			toggle_class(img, "bounce", /*animation*/ ctx[1]);
@@ -3902,7 +3902,7 @@ var app = (function () {
     			img = element("img");
     			add_location(br, file$9, 11, 13, 225);
     			if (!src_url_equal(img.src, img_src_value = "./img/scroll-down-" + /*color*/ ctx[0] + ".svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "arrow svelte-1prdo3z");
+    			attr_dev(img, "class", "arrow svelte-1bqd1ct");
     			attr_dev(img, "alt", "");
     			attr_dev(img, "aria-hidden", "true");
     			toggle_class(img, "bounce", /*animation*/ ctx[1]);
@@ -24670,7 +24670,7 @@ uniform `+P+" "+z+" u_"+k+`;
     	const block = {
     		c: function create() {
     			h1 = element("h1");
-    			h1.textContent = "E-NAIRA Statistics";
+    			h1.textContent = "E-NAIRA: The Journey";
     			t1 = space();
     			p0 = element("p");
     			p0.textContent = "This is a short text description of e-naira usage across Nigeria.";
@@ -24683,10 +24683,10 @@ uniform `+P+" "+z+" u_"+k+`;
     			attr_dev(p0, "class", "text-big");
     			set_style(p0, "margin-top", "5px");
     			set_style(p0, "color", "green");
-    			add_location(p0, file$s, 338, 2, 8792);
-    			set_style(p1, "margin-top", "20px");
+    			add_location(p0, file$s, 338, 2, 8794);
+    			set_style(p1, "margin-top", "10px");
     			set_style(p1, "color", "green ");
-    			add_location(p1, file$s, 341, 2, 8930);
+    			add_location(p1, file$s, 341, 2, 8932);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -24744,12 +24744,12 @@ uniform `+P+" "+z+" u_"+k+`;
     			t6 = text("\"The direct benefits of issuing eNaira vary depending on the specific context, but some\n    potential benefits include:\n    ");
     			br = element("br");
     			t7 = text("\n    Improved financial inclusion:\n    By providing a digital alternative to cash, eNaira\ncan make it easier for people who are unbanked\nor underbanked to access financial services.\n  \"");
-    			add_location(h2, file$s, 361, 2, 9417);
-    			add_location(p0, file$s, 362, 2, 9443);
-    			add_location(p1, file$s, 376, 2, 9996);
-    			add_location(br, file$s, 382, 4, 10218);
+    			add_location(h2, file$s, 361, 2, 9418);
+    			add_location(p0, file$s, 362, 2, 9444);
+    			add_location(p1, file$s, 376, 2, 9997);
+    			add_location(br, file$s, 382, 4, 10219);
     			attr_dev(blockquote, "class", "text-indent");
-    			add_location(blockquote, file$s, 379, 2, 10057);
+    			add_location(blockquote, file$s, 379, 2, 10058);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -24798,8 +24798,8 @@ uniform `+P+" "+z+" u_"+k+`;
     			t1 = space();
     			p = element("p");
     			p.textContent = "Below is a distribution chart of e-naira. It is display the distribution within the states of Nigeria.";
-    			add_location(h2, file$s, 394, 2, 10462);
-    			add_location(p, file$s, 395, 2, 10513);
+    			add_location(h2, file$s, 394, 2, 10463);
+    			add_location(p, file$s, 395, 2, 10514);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -24909,7 +24909,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			div = element("div");
     			create_component(barchart.$$.fragment);
     			attr_dev(div, "class", "chart-sml svelte-xshzp7");
-    			add_location(div, file$s, 402, 4, 10745);
+    			add_location(div, file$s, 402, 4, 10746);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -24960,8 +24960,8 @@ uniform `+P+" "+z+" u_"+k+`;
     			t1 = space();
     			p = element("p");
     			p.textContent = "eNaira can provide more accurate and granular \ndata on economic activity and monetary policy \ntransmission mechanisms.\nIt's important to note that the Bank is aware of \nthe potential risks and challenges associated \nwith issuing eNaira, such as the potential for \nincreased financial instability, privacy concerns, \nand the need for significant investments in new \ntechnology and infrastructure. Adequate \nmeasures are in place to ensure that this risk is\nmitigated to the barest minimum.";
-    			add_location(h2, file$s, 423, 2, 11232);
-    			add_location(p, file$s, 424, 2, 11284);
+    			add_location(h2, file$s, 423, 2, 11233);
+    			add_location(p, file$s, 424, 2, 11285);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -25079,7 +25079,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			create_component(linechart.$$.fragment);
     			t = space();
     			attr_dev(div, "class", "chart-sml svelte-xshzp7");
-    			add_location(div, file$s, 447, 6, 12055);
+    			add_location(div, file$s, 447, 6, 12056);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -25234,9 +25234,9 @@ uniform `+P+" "+z+" u_"+k+`;
     			t3 = space();
     			p1 = element("p");
     			p1.textContent = "Here are some preventive measures that are\ntaken by CBN and other financial institutions to \nprevent fraud:";
-    			add_location(h2, file$s, 472, 2, 12607);
-    			add_location(p0, file$s, 473, 2, 12658);
-    			add_location(p1, file$s, 481, 2, 12936);
+    			add_location(h2, file$s, 472, 2, 12608);
+    			add_location(p0, file$s, 473, 2, 12659);
+    			add_location(p1, file$s, 481, 2, 12937);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -25311,7 +25311,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			div = element("div");
     			create_component(scatterchart.$$.fragment);
     			attr_dev(div, "class", "chart svelte-xshzp7");
-    			add_location(div, file$s, 493, 10, 13290);
+    			add_location(div, file$s, 493, 10, 13291);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -25374,10 +25374,10 @@ uniform `+P+" "+z+" u_"+k+`;
     			div0 = element("div");
     			if (if_block) if_block.c();
     			attr_dev(div0, "class", "col-wide height-full");
-    			add_location(div0, file$s, 491, 6, 13180);
-    			add_location(figure, file$s, 490, 4, 13165);
+    			add_location(div0, file$s, 491, 6, 13181);
+    			add_location(figure, file$s, 490, 4, 13166);
     			attr_dev(div1, "slot", "background");
-    			add_location(div1, file$s, 489, 2, 13137);
+    			add_location(div1, file$s, 489, 2, 13138);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -25465,11 +25465,11 @@ uniform `+P+" "+z+" u_"+k+`;
 
     			option.__value = option_value_value = null;
     			option.value = option.__value;
-    			add_location(option, file$s, 579, 14, 15923);
+    			add_location(option, file$s, 579, 14, 15924);
     			attr_dev(select, "class", "svelte-xshzp7");
     			if (/*selected*/ ctx[2] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[22].call(select));
-    			add_location(select, file$s, 578, 12, 15878);
-    			add_location(p, file$s, 576, 10, 15810);
+    			add_location(select, file$s, 578, 12, 15879);
+    			add_location(p, file$s, 576, 10, 15811);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -25550,7 +25550,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			t1 = space();
     			option.__value = option_value_value = /*place*/ ctx[39].properties.AREACD;
     			option.value = option.__value;
-    			add_location(option, file$s, 581, 16, 16028);
+    			add_location(option, file$s, 581, 16, 16029);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -25664,38 +25664,38 @@ uniform `+P+" "+z+" u_"+k+`;
     			p4.textContent = "The chart will also highlight the other LGAs with most usage e-naira in the country.";
     			t19 = space();
     			if (if_block) if_block.c();
-    			add_location(strong0, file$s, 537, 10, 14630);
-    			add_location(p0, file$s, 535, 8, 14585);
+    			add_location(strong0, file$s, 537, 10, 14631);
+    			add_location(p0, file$s, 535, 8, 14586);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file$s, 534, 6, 14552);
+    			add_location(div0, file$s, 534, 6, 14553);
     			attr_dev(section0, "data-id", "chart01");
-    			add_location(section0, file$s, 533, 4, 14518);
-    			add_location(strong1, file$s, 546, 10, 14960);
-    			add_location(p1, file$s, 544, 8, 14893);
+    			add_location(section0, file$s, 533, 4, 14519);
+    			add_location(strong1, file$s, 546, 10, 14961);
+    			add_location(p1, file$s, 544, 8, 14894);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file$s, 543, 6, 14860);
+    			add_location(div1, file$s, 543, 6, 14861);
     			attr_dev(section1, "data-id", "chart02");
-    			add_location(section1, file$s, 542, 4, 14826);
-    			add_location(strong2, file$s, 555, 10, 15191);
-    			add_location(p2, file$s, 553, 8, 15136);
+    			add_location(section1, file$s, 542, 4, 14827);
+    			add_location(strong2, file$s, 555, 10, 15192);
+    			add_location(p2, file$s, 553, 8, 15137);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file$s, 552, 6, 15103);
+    			add_location(div2, file$s, 552, 6, 15104);
     			attr_dev(section2, "data-id", "chart03");
-    			add_location(section2, file$s, 551, 4, 15069);
-    			add_location(strong3, file$s, 564, 10, 15433);
-    			add_location(p3, file$s, 562, 8, 15366);
+    			add_location(section2, file$s, 551, 4, 15070);
+    			add_location(strong3, file$s, 564, 10, 15434);
+    			add_location(p3, file$s, 562, 8, 15367);
     			attr_dev(div3, "class", "col-medium");
-    			add_location(div3, file$s, 561, 6, 15333);
+    			add_location(div3, file$s, 561, 6, 15334);
     			attr_dev(section3, "data-id", "chart04");
-    			add_location(section3, file$s, 560, 4, 15299);
-    			add_location(h3, file$s, 571, 8, 15638);
-    			add_location(p4, file$s, 572, 8, 15666);
+    			add_location(section3, file$s, 560, 4, 15300);
+    			add_location(h3, file$s, 571, 8, 15639);
+    			add_location(p4, file$s, 572, 8, 15667);
     			attr_dev(div4, "class", "col-medium");
-    			add_location(div4, file$s, 570, 6, 15605);
+    			add_location(div4, file$s, 570, 6, 15606);
     			attr_dev(section4, "data-id", "chart05");
-    			add_location(section4, file$s, 569, 4, 15571);
+    			add_location(section4, file$s, 569, 4, 15572);
     			attr_dev(div5, "slot", "foreground");
-    			add_location(div5, file$s, 532, 2, 14490);
+    			add_location(div5, file$s, 532, 2, 14491);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -25783,9 +25783,9 @@ uniform `+P+" "+z+" u_"+k+`;
     			p0.textContent = "The overriding objective for introducing the \neNaira is that households and businesses can \nmake fast, efficient, and reliable payments, and \nbenefit from a resilient, inclusive, innovative, and \ninexpensive payment system.";
     			t3 = space();
     			p1 = element("p");
-    			add_location(h2, file$s, 596, 2, 16287);
-    			add_location(p0, file$s, 597, 2, 16334);
-    			add_location(p1, file$s, 604, 2, 16575);
+    			add_location(h2, file$s, 596, 2, 16288);
+    			add_location(p0, file$s, 597, 2, 16335);
+    			add_location(p1, file$s, 604, 2, 16576);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -25901,7 +25901,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			div = element("div");
     			if (if_block) if_block.c();
     			attr_dev(div, "class", "chart-full svelte-xshzp7");
-    			add_location(div, file$s, 611, 2, 16673);
+    			add_location(div, file$s, 611, 2, 16674);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -25971,9 +25971,9 @@ uniform `+P+" "+z+" u_"+k+`;
     			t1 = space();
     			p = element("p");
     			p.textContent = "The below map shows the details area of the most and least usage and adoption of e-naira";
-    			add_location(h2, file$s, 644, 2, 17448);
+    			add_location(h2, file$s, 644, 2, 17449);
     			attr_dev(p, "class", "mb");
-    			add_location(p, file$s, 645, 2, 17505);
+    			add_location(p, file$s, 645, 2, 17506);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -26340,10 +26340,10 @@ uniform `+P+" "+z+" u_"+k+`;
     			div0 = element("div");
     			create_component(map_1.$$.fragment);
     			attr_dev(div0, "class", "col-full height-full");
-    			add_location(div0, file$s, 654, 8, 17770);
-    			add_location(figure, file$s, 653, 6, 17753);
+    			add_location(div0, file$s, 654, 8, 17771);
+    			add_location(figure, file$s, 653, 6, 17754);
     			attr_dev(div1, "slot", "background");
-    			add_location(div1, file$s, 652, 4, 17723);
+    			add_location(div1, file$s, 652, 4, 17724);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -26560,7 +26560,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			t1 = text("\n              , the district with the most  usage of e-naira, with ");
     			t2 = text(t2_value);
     			t3 = text("\n               in 2years.\n            ");
-    			add_location(p, file$s, 730, 12, 20688);
+    			add_location(p, file$s, 730, 12, 20689);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -26637,11 +26637,11 @@ uniform `+P+" "+z+" u_"+k+`;
 
     			option.__value = option_value_value = null;
     			option.value = option.__value;
-    			add_location(option, file$s, 750, 16, 21398);
+    			add_location(option, file$s, 750, 16, 21399);
     			attr_dev(select, "class", "svelte-xshzp7");
     			if (/*selected*/ ctx[2] === void 0) add_render_callback(() => /*select_change_handler_1*/ ctx[25].call(select));
-    			add_location(select, file$s, 749, 14, 21315);
-    			add_location(p, file$s, 747, 12, 21243);
+    			add_location(select, file$s, 749, 14, 21316);
+    			add_location(p, file$s, 747, 12, 21244);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -26726,7 +26726,7 @@ uniform `+P+" "+z+" u_"+k+`;
     			t1 = space();
     			option.__value = option_value_value = /*place*/ ctx[39].properties.AREACD;
     			option.value = option.__value;
-    			add_location(option, file$s, 752, 18, 21507);
+    			add_location(option, file$s, 752, 18, 21508);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -26887,30 +26887,30 @@ uniform `+P+" "+z+" u_"+k+`;
     			p2.textContent = "Use the selection box below or click on the map to select and zoom\n            to a LGA.";
     			t16 = space();
     			if (if_block) if_block.c();
-    			add_location(strong0, file$s, 704, 12, 19711);
-    			add_location(p0, file$s, 702, 10, 19666);
+    			add_location(strong0, file$s, 704, 12, 19712);
+    			add_location(p0, file$s, 702, 10, 19667);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file$s, 701, 8, 19631);
+    			add_location(div0, file$s, 701, 8, 19632);
     			attr_dev(section0, "data-id", "map01");
-    			add_location(section0, file$s, 700, 6, 19597);
-    			add_location(strong1, file$s, 717, 12, 20168);
-    			add_location(p1, file$s, 715, 10, 20119);
+    			add_location(section0, file$s, 700, 6, 19598);
+    			add_location(strong1, file$s, 717, 12, 20169);
+    			add_location(p1, file$s, 715, 10, 20120);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file$s, 714, 8, 20084);
+    			add_location(div1, file$s, 714, 8, 20085);
     			attr_dev(section1, "data-id", "map02");
-    			add_location(section1, file$s, 713, 6, 20050);
+    			add_location(section1, file$s, 713, 6, 20051);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file$s, 727, 8, 20459);
+    			add_location(div2, file$s, 727, 8, 20460);
     			attr_dev(section2, "data-id", "map03");
-    			add_location(section2, file$s, 726, 6, 20425);
-    			add_location(h3, file$s, 741, 10, 21055);
-    			add_location(p2, file$s, 742, 10, 21087);
+    			add_location(section2, file$s, 726, 6, 20426);
+    			add_location(h3, file$s, 741, 10, 21056);
+    			add_location(p2, file$s, 742, 10, 21088);
     			attr_dev(div3, "class", "col-medium");
-    			add_location(div3, file$s, 740, 8, 21020);
+    			add_location(div3, file$s, 740, 8, 21021);
     			attr_dev(section3, "data-id", "map04");
-    			add_location(section3, file$s, 739, 6, 20986);
+    			add_location(section3, file$s, 739, 6, 20987);
     			attr_dev(div4, "slot", "foreground");
-    			add_location(div4, file$s, 699, 4, 19567);
+    			add_location(div4, file$s, 699, 4, 19568);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
