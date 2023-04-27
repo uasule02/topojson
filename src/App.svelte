@@ -22,6 +22,8 @@
   import { ScatterChart, LineChart, BarChart } from '@onsvisual/svelte-charts'
   import { Map, MapSource, MapLayer, MapTooltip } from '@onsvisual/svelte-maps'
 
+
+
   // CORE CONFIG (COLOUR THEMES)
   // Set theme globally (options are 'light', 'dark' or 'lightblue')
   let theme = 'light'
@@ -37,6 +39,7 @@
   let idPrev = {} // Object to keep track of previous IDs, to compare for changes
   onMount(() => {
     idPrev = { ...id }
+
   })
 
   // DEMO-SPECIFIC CONFIG
@@ -145,21 +148,21 @@
         yKey = null
         zKey = null
         rKey = null
-        explore = false
+        explore = true
       },
       chart02: () => {
         xKey = 'area'
         yKey = null
         zKey = null
         rKey = 'pop'
-        explore = false
+        explore = true
       },
       chart03: () => {
         xKey = 'area'
         yKey = 'density'
         zKey = null
         rKey = 'pop'
-        explore = false
+        explore = true
       },
       chart04: () => {
         xKey = 'area'
@@ -177,6 +180,12 @@
       },
     },
   }
+
+const date = new Date();
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const monthName = months[date.getMonth()];
+const currentDate = `${date.getDate()} ${monthName} ${date.getFullYear()}`;
+
 
   // Code to run Scroller actions when new caption IDs come into view
   function runActions(codes = []) {
@@ -274,6 +283,9 @@
     )
     geojson = geo
   })
+  
+
+
 </script>
 
 <style>
@@ -317,18 +329,18 @@
 
 <ONSHeader filled={true} center={false} />
 <Header
-  bgcolor="#000fff"
+  bgcolor="#0FFFF"
   bgfixed={true}
   theme="dark"
   center={false}
   short={true}>
-
-  <h1 style="margin-top: 5px">E-NAIRA Statistics</h1>
-  <p class="text-big" style="margin-top: 5px">
+  
+  <h1 style="margin-top: 5px; color: green">E-NAIRA Statistics</h1>
+  <p class="text-big" style="margin-top: 5px; color: green">
     This is a short text description of e-naira usage across Nigeria.
   </p>
-  <p style="margin-top: 20px">DD MMM YYYY</p>
-  <p>
+  <p style="margin-top: 20px; color: green ">{currentDate}</p>
+  <!-- <p>
     <Toggle
       label="Animation {animation ? 'on' : 'off'}"
       mono={true}
@@ -336,7 +348,7 @@
   </p>
   <div style="margin-top: 40px;">
     <Arrow color="white" {animation}>Scroll to begin</Arrow>
-  </div> 
+  </div> -->
 </Header> 
 
 
@@ -363,22 +375,26 @@ percent year-over-year to reach N117.33tn in
 2022.
   </p>
   <p>
-    This is a second short paragraph of text to demonstrate the size of the
-    paragraph spacing in the template.
+    What are the direct benefits of the eNaira?
   </p>
   <blockquote class="text-indent">
-    "This is an example of a large embedded quotation."&mdash;A. Person
+    "The direct benefits of issuing eNaira vary depending on the specific context, but some
+    potential benefits include:
+    <br/>
+    Improved financial inclusion:
+    By providing a digital alternative to cash, eNaira
+can make it easier for people who are unbanked
+or underbanked to access financial services.
+  "
   </blockquote>
 </Section>
 
 <Divider />
 
 <Section>
-  <h2>Embedded charts or media</h2>
+  <h2>Distribution and circulation of e-naira</h2>
   <p>
-    Below is an embedded chart. It is set to the same width as the column,
-    "medium" (680px), but could also be "narrow" (540px), "wide" (980px) or
-    "full" width. All options are responsive to fit the width of narrow screens.
+    Below is a distribution chart of e-naira. It is display the distribution within the states of Nigeria.
   </p>
 </Section>
 
@@ -392,10 +408,12 @@ percent year-over-year to reach N117.33tn in
         snapTicks={false}
         xFormatTick={(d) => d / 1e6}
         xSuffix="m"
+        color="green"
         height={350}
         padding={{ top: 20, bottom: 15, left: 140, right: 0 }}
         area={false}
         title="E-nairra circulation by region/nation, 2022" />
+       
     </div>
   </Media>
 {/if}
@@ -403,12 +421,20 @@ percent year-over-year to reach N117.33tn in
 <Divider />
 
 <Section>
-  <h2>Gridded charts or media</h2>
+  <h2>Transaction charts of e-naira of states </h2>
   <p>
-    Below is a grid that can contain charts or any other kind of visual media.
-    The grid can fit in a medium, wide or full-width column, and the media width
-    itself can be narrow (min 200px), medium (min 300px), wide (min 500px) or
-    full-width. The grid is responsive, and will re-flow on smaller screens.
+    eNaira can provide more accurate and granular 
+data on economic activity and monetary policy 
+transmission mechanisms.
+It's important to note that the Bank is aware of 
+the potential risks and challenges associated 
+with issuing eNaira, such as the potential for 
+increased financial instability, privacy concerns, 
+and the need for significant investments in new 
+technology and infrastructure. Adequate 
+measures are in place to ensure that this risk is
+mitigated to the barest minimum.
+
   </p>
 </Section>
 
@@ -425,7 +451,7 @@ percent year-over-year to reach N117.33tn in
           xKey="year"
           yKey="value"
           zKey="code"
-          color="lightgrey"
+          color="green"
           lineWidth={1}
           xTicks={2}
           snapTicks={false}
@@ -444,15 +470,19 @@ percent year-over-year to reach N117.33tn in
 <Divider />
 
 <Section>
-  <h2>This is a dynamic chart section</h2>
+  <h2>The usage of e-naira in LGAs of Nigeria</h2>
   <p>
-    The chart below will respond to the captions as you scroll down. The
-    "Scroller" component is set to "splitscreen" mode, which means the captions
-    will be on the left side on larger screens.
+    eNaira is a digital version of Nigeria’s
+fiat currency, issued and backed by the 
+country's central bank. It is designed to coexist 
+with physical Naira (cash) and bank deposits 
+and can be used for making digital payments, 
+just like other digital currencies.
   </p>
   <p>
-    The interactions are via Javascript functions that are called when each
-    caption scrolls into view.
+    Here are some preventive measures that are
+taken by CBN and other financial institutions to 
+prevent fraud:
   </p>
 </Section>
 
@@ -468,7 +498,7 @@ percent year-over-year to reach N117.33tn in
                 ...d,
                 parent_name: metadata.region.lookup[d.parent].name,
               }))}
-              colors={explore ? ['lightgrey'] : colors.cat}
+              colors={explore ? ['green'] : colors.cat}
               {xKey}
               {yKey}
               {zKey}
@@ -505,46 +535,43 @@ percent year-over-year to reach N117.33tn in
       <div class="col-medium">
         <p>
           This chart shows the
-          <strong>area in square kilometres</strong>
-          of each local authority district in the Nigeria. Each circle
-          represents one district. The scale is logarithmic.
+          <strong>e-naira transaction in all LGAs in Nigeia.</strong>
+           Each circle represents one district of local authority district in the Nigeria.
         </p>
       </div>
     </section>
     <section data-id="chart02">
       <div class="col-medium">
         <p>
-          The radius of each circle shows the
-          <strong>total population</strong>
-          of the district.
+          The following chart shows the growth rate 
+          <strong>of e-naira transaction </strong>
+          in all LGAs.
         </p>
       </div>
     </section>
     <section data-id="chart03">
       <div class="col-medium">
         <p>
-          The vertical axis shows the
-          <strong>density</strong>
-          of the district in people per hectare.
+           This shows the usage density 
+          <strong>of e-naira </strong>
+          per people of the LGAs.
         </p>
       </div>
     </section>
     <section data-id="chart04">
       <div class="col-medium">
         <p>
-          The colour of each circle shows the
-          <strong>part of the country</strong>
-          that the district is within.
+          The colour of each circle (LGAs) shows the
+          <strong>the gap needed in transcation of e-naira</strong>
+          that the LGAs is within.
         </p>
       </div>
     </section>
     <section data-id="chart05">
       <div class="col-medium">
-        <h3>Select a district</h3>
+        <h3>Select LGA</h3>
         <p>
-          Use the selection box below or click on the chart to select a
-          district. The chart will also highlight the other districts in the
-          same part of the country.
+          The chart will also highlight the other LGAs with most usage e-naira in the country.
         </p>
         {#if geojson}
           <p>
@@ -567,10 +594,13 @@ percent year-over-year to reach N117.33tn in
 <Divider />
 
 <Section>
-  <h2>This is a full-width chart demo</h2>
+  <h2>This standard deviation of e-naira </h2>
   <p>
-    Below is an example of a media grid where the column with is set to "full".
-    This allows for full width images and charts.
+    The overriding objective for introducing the 
+eNaira is that households and businesses can 
+make fast, efficient, and reliable payments, and 
+benefit from a resilient, inclusive, innovative, and 
+inexpensive payment system.
   </p>
   <p />
 </Section>
@@ -578,8 +608,7 @@ percent year-over-year to reach N117.33tn in
 <Media
   col="full"
   height={600}
-  caption="This is an optional caption for the above chart or media. It can
-  contain HTML code and wrap onto multiple lines.">
+  caption="Line distribution of e-naira ">
   <div class="chart-full">
     {#if data.district.timeseries}
       <LineChart
@@ -589,7 +618,7 @@ percent year-over-year to reach N117.33tn in
         xKey="year"
         yKey="value"
         zKey="code"
-        color="lightgrey"
+        color="green"
         lineWidth={1}
         yFormatTick={(d) => (d / 1e6).toFixed(1)}
         ySuffix="m"
@@ -603,7 +632,7 @@ percent year-over-year to reach N117.33tn in
         colorSelect="#206095"
         colorHighlight="#999"
         area={false}
-        title="Mid-year population by district, 2001 to 2020"
+        title="2years transction by district, 2020 to 2022"
         labels
         labelKey="name" />
     {/if}
@@ -613,11 +642,9 @@ percent year-over-year to reach N117.33tn in
 <Divider />
 
 <Section>
-  <h2>This is a dynamic map section</h2>
+  <h2>The shows the area and circulation of e-naira</h2>
   <p class="mb">
-    The map below will respond to the captions as you scroll down. The scroller
-    is not set to splitscreen, so captions are placed over the map on any screen
-    size.
+    The below map shows the details area of the most and least usage and adoption of e-naira
   </p>
 </Section>
 
@@ -674,25 +701,25 @@ percent year-over-year to reach N117.33tn in
       <section data-id="map01">
         <div class="col-medium">
           <p>
-            This map shows
-            <strong>population density</strong>
-            by district. Districts are coloured from
+            This map display
+            <strong>e-naira circulation density</strong>
+            by LGAs. LGAs are coloured from
             <Em color={colors.seq[0]}>least dense</Em>
             to
             <Em color={colors.seq[4]}>most dense</Em>
-            . You can hover to see the district name and density.
+            . You can hover to see the LGA name and circulation density.
           </p>
         </div>
       </section>
       <section data-id="map02">
         <div class="col-medium">
           <p>
-            The map now shows
-            <strong>median age</strong>
+            The map then display
+            <strong> the average usage of e-naira</strong>
             , from
-            <Em color={colors.seq[0]}>youngest</Em>
+            <Em color={colors.seq[0]}>least usage</Em>
             to
-            <Em color={colors.seq[4]}>oldest</Em>
+            <Em color={colors.seq[4]}>most usage</Em>
             .
           </p>
         </div>
@@ -704,18 +731,18 @@ percent year-over-year to reach N117.33tn in
             <p>
               The map is now zoomed on
               <Em color={district.age_med_color}>{district.name}</Em>
-              , the district with the oldest median age, {district.age_med}
-              years.
+              , the district with the most  usage of e-naira, with {district.age_med}
+               in 2years.
             </p>
           {/each}
         </div>
       </section>
       <section data-id="map04">
         <div class="col-medium">
-          <h3>Select a district</h3>
+          <h3>Select a LGA</h3>
           <p>
             Use the selection box below or click on the map to select and zoom
-            to a district.
+            to a LGA.
           </p>
           {#if geojson}
             <p>
